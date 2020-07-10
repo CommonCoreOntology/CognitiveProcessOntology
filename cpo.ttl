@@ -1,0 +1,1112 @@
+@prefix : <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> rdf:type owl:Ontology ;
+                                                                                          owl:versionIRI <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/2019-07-15/CognitiveProcessOntology> ;
+                                                                                          owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AllCoreOntology> ;
+                                                                                          rdfs:label "Cognitive Process Ontology" ;
+                                                                                          dc:contributor "Barry Smith" ,
+                                                                                                         "David Kasmier" ;
+                                                                                          owl:versionInfo "Version 0.8" ;
+                                                                                          dc:contributor "David Gordon Limbaugh" ;
+                                                                                          owl:versionInfo "July 15, 2019" ;
+                                                                                          rdfs:comment "This ontology is designed to represent the acts performed during the collection of information and generation of intelligence products" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_evidence_for
+cco:is_evidence_for rdf:type owl:ObjectProperty ;
+                    cco:definition "A relation between CognitiveRepresentations that fixes a ConfidenceRepresentation about a CognitiveRepresentation." ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
+                    rdfs:label "is evidence for" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_fused_with
+cco:is_fused_with rdf:type owl:ObjectProperty ;
+                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
+                  rdfs:comment "Take for example what appears to be a solid green image displayed on a television screen, which upon very close inspection is revealed to have a color made out of tiny yellow and blue squares (or pixels), which give a green appearance to the naked eye. The pixels are bearers of many instances of yellow and blue, and these instances appear to have fused into an additional instance of greenness. Similarly, when an instance of a cognitive representation and an instance of positive confidence value are fused together in a cognitive system there seems to be an additional quality instance: an instance of an RTB." ,
+                               "‘Fusion’ is a term adapted from Husserl (who in turn takes it from Stumpf and is a primitive relationship that obtains between multiple quality instances when they are so closely related that an additional quality instance seems to emerge from them." ;
+                  rdfs:label "is fused with" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AcceptanceDecision
+cco:AcceptanceDecision rdf:type owl:Class ;
+                       rdfs:subClassOf cco:Decision ;
+                       cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                       rdfs:label "AcceptanceDecision" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AcceptanceDecisionSpecification
+cco:AcceptanceDecisionSpecification rdf:type owl:Class ;
+                                    rdfs:subClassOf cco:DecisionSpecification ;
+                                    cco:definition "A decision specificaiton that specifies that some proposition in a binary decision is to be carried out" ;
+                                    cco:definition_source "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl" ;
+                                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                    rdfs:label "AcceptanceDecisionSpecification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfAttending
+cco:ActOfAttending rdf:type owl:Class ;
+                   rdfs:subClassOf cco:PerceivingProcess ;
+                   cco:definition "The process whereby relevant aspects of our mental experience are focused on specific portions of reality." ;
+                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                   rdfs:label "ActOfAttending" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCharacterization
+cco:ActOfCharacterization rdf:type owl:Class ;
+                          rdfs:subClassOf cco:IntentionalAct ;
+                          cco:definition "The act of describing distinctive characteristics of some portion of reality." ;
+                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                          rdfs:label "ActOfCharacterization" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCommunication
+cco:ActOfCommunication rdf:type owl:Class ;
+                       cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                       rdfs:label "ActOfCommunication" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCritique
+cco:ActOfCritique rdf:type owl:Class ;
+                  rdfs:subClassOf cco:ActOfEvaluation ;
+                  cco:definition "a detalied assessment of some portion of reality that was intentionally created." ;
+                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                  rdfs:label "ActOfCritique" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfDeceptiveCommunication
+cco:ActOfDeceptiveCommunication rdf:type owl:Class ;
+                                rdfs:subClassOf cco:ActOfCommunication ;
+                                cco:definition "An Act of Communication intended to mislead the audience by distortion or falsification of evidence and induce a reaction that is prejudicial to the interests of the audience." ;
+                                cco:definition_source "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl" ;
+                                cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                rdfs:label "Act of Deceptive Communication" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfEvaluation
+cco:ActOfEvaluation rdf:type owl:Class ;
+                    rdfs:subClassOf cco:ActOfAttending ;
+                    cco:definition "A cognitive process that systematically appraises the significance or value of some portion of reality according to specified objectives and criteria." ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                    rdfs:label "ActOfEvaluation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfInformationCollection
+cco:ActOfInformationCollection rdf:type owl:Class ;
+                               rdfs:subClassOf cco:IntentionalAct ;
+                               cco:definition "A process in response to an act of requesting information collection that is the acquiring of information that is not currently had by the agent's organization and the delivering of that informaiton to the requesting agent." ;
+                               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                               rdfs:label "ActOfInformationCollection" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfInformationRetrieval
+cco:ActOfInformationRetrieval rdf:type owl:Class ;
+                              rdfs:subClassOf cco:IntentionalAct ;
+                              cco:definition "A process in response to an act of requesting information retrieval that is the acquiring of information, had by the agent's organization, and devivering it to the requesting agent." ;
+                              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                              rdfs:label "ActOfInformationRetrieval" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfIntelligenceGathering
+cco:ActOfIntelligenceGathering rdf:type owl:Class ;
+                               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                               rdfs:label "ActOfIntelligenceGathering" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfInterpretation
+cco:ActOfInterpretation rdf:type owl:Class ;
+                        rdfs:subClassOf cco:IntentionalAct ;
+                        cco:definition "An intentional act of elucidation, explication, or explanation of the meaning or significance of some portion of reality." ;
+                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                        rdfs:label "ActOfInterpretation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfInvestigation
+cco:ActOfInvestigation rdf:type owl:Class ;
+                       rdfs:subClassOf cco:CognitiveProcess ;
+                       cco:definition "A cognitive process whose agent intends to establish or confirm that some portion of reality exists or does not exist." ;
+                       cco:definition_source "PAPER: WARRANTED DIAGNOSIS" ;
+                       cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                       rdfs:label "ActOfInvestigation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfJudging
+cco:ActOfJudging rdf:type owl:Class ;
+                 rdfs:subClassOf cco:CognitiveProcess ;
+                 cco:definition "Judging is the evaluation of evidence to make a decision or form a belief." ;
+                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                 rdfs:label "ActOfJudging" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfMonitoring
+cco:ActOfMonitoring rdf:type owl:Class ;
+                    rdfs:subClassOf cco:ActOfInvestigation ;
+                    cco:definition "An act of investigation wherby an agent waits for a change in, and observes, a circumstance with the intention of confirming or disconfirming the existence of some portion of reality." ;
+                    cco:definition_source "Google Dictionary" ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                    rdfs:comment "This needs work to distinguish it from, for example, the act of answering the door." ,
+                                 "This was originally a subclass of CCO:Act of Observation, however seems better suited to be a subclass of an Act of Investigation." ;
+                    rdfs:label "ActOfMonitoring" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfQuestioning
+cco:ActOfQuestioning rdf:type owl:Class ;
+                     rdfs:subClassOf cco:CognitiveProcess ;
+                     cco:definition "A cogntiive process that is an act of requesting information." ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                     rdfs:label "ActOfQuestioning" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfRequesting
+cco:ActOfRequesting rdf:type owl:Class ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                    rdfs:label "ActOfRequesting" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfRequestingAnInvestigation
+cco:ActOfRequestingAnInvestigation rdf:type owl:Class ;
+                                   rdfs:subClassOf cco:ActOfInformationCollection ;
+                                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                   rdfs:label "ActOfRequestingAnInvestigation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfRequestingInformation
+cco:ActOfRequestingInformation rdf:type owl:Class ;
+                               rdfs:subClassOf cco:ActOfRequesting ;
+                               cco:definition "A directive communication act that prescribes the finding and delivering of information." ;
+                               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                               rdfs:label "ActOfRequestingInformation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfRequestingInformationRetrieval
+cco:ActOfRequestingInformationRetrieval rdf:type owl:Class ;
+                                        rdfs:subClassOf cco:ActOfRequestingInformation ;
+                                        cco:definition "An act of directive communication that prescribes an act of information retrieval." ;
+                                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                        rdfs:label "ActOfRequestingInformationRetrieval" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfValidation
+cco:ActOfValidation rdf:type owl:Class ;
+                    rdfs:subClassOf cco:ActOfIntelligenceGathering ;
+                    cco:definition "A planned process that confirms that an intelligence collection or production requirement is sufficiently important to justify the dedication of intelligence resources, does not duplicate an existing requirement, and has not been previously satisfied." ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                    rdfs:comment "These need to be evaluated and moved. #issue -dgl" ;
+                    rdfs:label "ActOfValidation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionSpecification
+cco:ActionSpecification rdf:type owl:Class ;
+                        rdfs:subClassOf cco:DirectiveInformationContentEntity ;
+                        cco:definition "a directive information entity that prescribes an action." ;
+                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                        rdfs:label "ActionSpecification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfRequestingInformationCollection
+cco:ActOfRequestingInformationCollection rdf:type owl:Class ;
+                                         rdfs:subClassOf cco:ActOfRequestingInformation ;
+                                         cco:definition "An act of directive communication that prescribes an act of information collection." ;
+                                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                         rdfs:label "ActOfRequestingInformationCollection" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AffectiveRepresentation
+cco:AffectiveRepresentation rdf:type owl:Class ;
+                            rdfs:subClassOf cco:MentalRepresentation ;
+                            cco:elucidation "A mental representation that has no direction of fit but is purely, and subjectively, evaluative." ;
+                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                            rdfs:label "AffectiveRepresentation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AnalogyComparing
+cco:AnalogyComparing rdf:type owl:Class ;
+                     rdfs:subClassOf cco:IsomorphicComparing ;
+                     cco:definition "An IsomorphicComparing in which an AnalogyReprosentation and some other CognitiveRepresentation participate and are compared for the sake of reasoning and forming new representations that are believed." ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                     rdfs:label "AnalogyComparing" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AnatomicalStructure
+cco:AnatomicalStructure rdf:type owl:Class ;
+                        rdfs:subClassOf obo:BFO_0000030 ;
+                        cco:definition "An object which is generated by coordinated expression of the organism's own genes that guide its morphogenesis; has inherent 3D shape; its parts are connected and spatially related to one another in patterns determined by coordinated gene expression. Examples: embryo, mesoderm, heart, right ventricle, mitral valve, myocardium, endothelium, lymphocyte, fibroblast, thorax, cardiovascular system, hemoglobin, T cell receptor." ;
+                        cco:definition_source "https://bioportal.bioontology.org/ontologies/FMA/?p=classes&conceptid=http%3A%2F%2Fpurl.org%2Fsig%2Font%2Ffma%2Ffma62955" ;
+                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                        rdfs:comment "Definition adapted form the Foundational Model of Anatomy (FMA). FMA has a number of parent classes that are not included here. This is an unresolved issue. #issue -dgl" ;
+                        rdfs:label "AnatomicalStructure" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ApprovalDecisionSpecification
+cco:ApprovalDecisionSpecification rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:AcceptanceDecision ;
+                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                  rdfs:label "ApprovalDecisionSpecification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Assertion
+cco:Assertion rdf:type owl:Class ;
+              rdfs:subClassOf cco:InformationQualityEntity ;
+              cco:definition "An information quality entity that is the concretization of a descriptive information content entity." ;
+              cco:definition_source "PAPER: WARRANTED DIAGNOSIS" ;
+              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+              rdfs:label "Assertion" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AssertionMethod
+cco:AssertionMethod rdf:type owl:Class ;
+                    rdfs:subClassOf cco:DirectiveInformationContentEntity ;
+                    cco:definition "A directive information entity that specifies an algorithm or heuristics for evaluating evidence in the process of making an assertion." ;
+                    cco:definition_source "http://www.evidenceontology.org/" ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                    rdfs:label "AssertionMethod" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AuthorizationDecision
+cco:AuthorizationDecision rdf:type owl:Class ;
+                          rdfs:subClassOf cco:AcceptanceDecision ;
+                          cco:definition "an authorization decision is an acceptance decision specification that additionally reflects an exercise of authority in the form of an act of granting permission." ;
+                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                          rdfs:label "AuthorizationDecision" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/BeliefDisposition
+cco:BeliefDisposition rdf:type owl:Class ;
+                      rdfs:subClassOf cco:DispositionToCognitivelyRepresent ;
+                      cco:definition "A Disposition to Cognitively Represent that is realized in the formation of a Representation that is Believed." ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                      rdfs:label "BeliefDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/BeliefFormation
+cco:BeliefFormation rdf:type owl:Class ;
+                    rdfs:subClassOf cco:CognitiveRepresentationFormation ;
+                    cco:definition "A Cognitive Representation Formation that just is the formation of a Representation that is Believed." ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                    rdfs:label "BeliefFormation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/BodilyCapability
+cco:BodilyCapability rdf:type owl:Class ;
+                     rdfs:subClassOf cco:Capability ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                     rdfs:label "BodilyCapability" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/BodilyDisposition
+cco:BodilyDisposition rdf:type owl:Class ;
+                      rdfs:subClassOf obo:BFO_0000016 ;
+                      cco:definition "A disposition that inheres in some extended organism. Examples are: my disposition to catch a cold when exposed to a virus, my ability to speak the English language." ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                      rdfs:label "BodilyDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/BodilyProcess
+cco:BodilyProcess rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000015 ;
+                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                  rdfs:comment "#issue needs definition -dgl" ;
+                  rdfs:label "BodilyProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/BodilyQuality
+cco:BodilyQuality rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000019 ;
+                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                  rdfs:comment "#issue needs definition" ;
+                  rdfs:label "BodilyQuality" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Capability
+cco:Capability rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000016 ;
+               cco:definition "A disposition whose realization in the normal case brings benefits to an organism or group of organisms, where \"in the normal case\" means not only in the normal range on the scale, but also in a context which is normal for the group to which the bearer or user belongs." ;
+               cco:definition_source "https://github.com/NCOR-US/Capabilities/wiki/The-Account-of-Capabilities" ;
+               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+               rdfs:comment "There is a proposal to make 'function' a subclass of 'capability'. This is not reflected here." ;
+               rdfs:label "Capability" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Classification
+cco:Classification rdf:type owl:Class ;
+                   rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                   cco:definition_source "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl" ;
+                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                   rdfs:comment "I can't find a defintion for this in DO #issue -dgl" ;
+                   rdfs:label "Classification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveAssociationDisposition
+cco:CognitiveAssociationDisposition rdf:type owl:Class ;
+                                    rdfs:subClassOf cco:CognitiveUtilizationDisposition ;
+                                    cco:definition "A Cognitive Utilization Disposition realized in a Cognitive Process of Association." ;
+                                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                    rdfs:label "CognitiveAssociationDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveComparisonDisposition
+cco:CognitiveComparisonDisposition rdf:type owl:Class ;
+                                   rdfs:subClassOf cco:CognitiveUtilizationDisposition ;
+                                   cco:definition "A Cognitive Utilization Disposition realized in a Cognitive Process of Comparing." ;
+                                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                   rdfs:label "CognitiveComparisonDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveDisposition
+cco:CognitiveDisposition rdf:type owl:Class ;
+                         rdfs:subClassOf cco:MentalDisposition ;
+                         cco:definition "A MentalDisposition realized in a CognitiveProcess" ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                         rdfs:label "CognitiveDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveInferenceDisposition
+cco:CognitiveInferenceDisposition rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:CognitiveUtilizationDisposition ;
+                                  cco:definition "A Cognitive Utilization Disposition realized in a Cognitive Process of Inferring." ;
+                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                  rdfs:label "CognitiveInferenceDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcess
+cco:CognitiveProcess rdf:type owl:Class ;
+                     rdfs:subClassOf cco:RepresentationalMentalProcess ;
+                     cco:definition "A mental process that brings into being, sustains, or modifies a cognitive representation." ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                     rdfs:label "CognitiveProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcessOfAssociation
+cco:CognitiveProcessOfAssociation rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:CognitiveUtilizationProcess ;
+                                  cco:definition "A Cognitive Process that just is the taking of some Cognitive Representation(s) as input and, based on some non-similarity and some non-evidential relation(s) between the input(s) and some representation(s), outputting some Cognitive Representation." ;
+                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                  rdfs:label "CognitiveProcessOfAssociation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcessOfComparing
+cco:CognitiveProcessOfComparing rdf:type owl:Class ;
+                                rdfs:subClassOf cco:CognitiveUtilizationProcess ;
+                                cco:definition "A Cognitive Process that just is the taking of some Cognitive Representations as input and, based on the similarity relations represented by the inputs, outputting some Cognitive Representation." ;
+                                cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                rdfs:label "CognitiveProcessOfComparing" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcessOfInferring
+cco:CognitiveProcessOfInferring rdf:type owl:Class ;
+                                rdfs:subClassOf cco:CognitiveUtilizationProcess ;
+                                cco:definition "A Cognitive Process that just is the taking of some Cognitive Representation(s) as input and, based on the semantic or syntactic relations of the input(s), outputting some Cognitive Representation." ;
+                                cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                rdfs:label "CognitiveProcessOfInferring" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveRepresentation
+cco:CognitiveRepresentation rdf:type owl:Class ;
+                            rdfs:subClassOf cco:MentalRepresentation ;
+                            cco:elucidation "A Mental Representation that has a mind-to-world direction of fit." ;
+                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                            rdfs:label "CognitiveRepresentation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveRepresentationFormation
+cco:CognitiveRepresentationFormation rdf:type owl:Class ;
+                                     rdfs:subClassOf cco:CognitiveProcess ;
+                                     owl:disjointWith cco:CognitiveUtilizationProcess ;
+                                     cco:definition "A Cognitive Process that just is the formation of a Cognitive Representation." ;
+                                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                     rdfs:label "CognitiveRepresentationFormation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveUtilizationDisposition
+cco:CognitiveUtilizationDisposition rdf:type owl:Class ;
+                                    rdfs:subClassOf cco:CognitiveDisposition ;
+                                    cco:definition "A CognitiveDisposition the realization of which is the formation of a RetrospectiveDisposition." ;
+                                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                    rdfs:label "CognitiveUtilizationDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveUtilizationProcess
+cco:CognitiveUtilizationProcess rdf:type owl:Class ;
+                                rdfs:subClassOf cco:CognitiveProcess ;
+                                cco:definition "A Cognitive Process that just is the taking of some Cognitive Representation(s) as input and, based on the inputs, outputting some Cognitive Representation." ;
+                                cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                rdfs:label "CognitiveUtilizationProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ConativeRepresenation
+cco:ConativeRepresenation rdf:type owl:Class ;
+                          rdfs:subClassOf cco:MentalRepresentation ;
+                          cco:elucidation "A mental representation that has a world-to-mind direction of fit." ;
+                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                          rdfs:label "ConativeRepresenation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ConditionalSpecification
+cco:ConditionalSpecification rdf:type owl:Class ;
+                             rdfs:subClassOf cco:DirectiveInformationContentEntity ;
+                             cco:definition "a directive information entity that prescribes what should happen if a trigger condition is fulfilled." ;
+                             cco:definition_source "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl" ;
+                             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                             rdfs:label "ConditionalSpecification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ConfidenceValue
+cco:ConfidenceValue rdf:type owl:Class ;
+                    rdfs:subClassOf cco:MentalQuality ;
+                    cco:definition "A mental quality that, when fused with a cognitive representation CR, determines the extent to which a cognitive system operates as if CR is veridical." ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                    rdfs:label "ConfidenceValue" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Consciousness
+cco:Consciousness rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000144 ;
+                  cco:definition "Consciousness is an inseparable part of all mental processes. It is that part of the mental process that: a) confers a subjective perspective, a phenomenology, an experience of the mental process of which it is a part; and b) intends the object or event that the mental process is about, should such exist; i.e., it confers intentionality on the mental process." ;
+                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                  rdfs:label "Consciousness" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ConstraintSpecification
+cco:ConstraintSpecification rdf:type owl:Class ;
+                            rdfs:subClassOf cco:ObjectiveSpecification ;
+                            cco:definition "An objective specification that specifies a set of limitations on the possible states of some entity." ;
+                            cco:definition_source "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl" ;
+                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                            rdfs:label "ConstraintSpecification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Decision
+cco:Decision rdf:type owl:Class ;
+             rdfs:subClassOf cco:CognitiveProcess ;
+             cco:definition "a decision process is a process in which some agent or aggregate of agents having the role of a decision maker indicate a preference towards an option or bundle of options belonging to a set of possible alternatives" ;
+             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+             rdfs:label "Decision" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DecisionAlternative
+cco:DecisionAlternative rdf:type owl:Class ;
+                        rdfs:subClassOf cco:Classification ;
+                        cco:definition "a decision alternative is a classification that indicates some entity is to be considered as a possible choice in a decision described in a decision process plan" ;
+                        cco:definition_source "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl" ;
+                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                        rdfs:label "DecisionAlternative" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DecisionMakerRole
+cco:DecisionMakerRole rdf:type owl:Class ;
+                      rdfs:subClassOf obo:BFO_0000023 ;
+                      cco:definition "a decision role is a role wherein the bearer realizes the role by performing a decision process resulting in a decision" ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                      rdfs:label "DecisionMakerRole" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DecisionMethod
+cco:DecisionMethod rdf:type owl:Class ;
+                   rdfs:subClassOf cco:MethodSpecification ;
+                   cco:definition "a decision method is a plan specification that outlines a workflow by which a decision will be made, as well as the requisite information content entities required to acheive said workflow." ;
+                   cco:definition_source "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl" ;
+                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                   rdfs:label "DecisionMethod" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DecisionPlanSpecification
+cco:DecisionPlanSpecification rdf:type owl:Class ;
+                              rdfs:subClassOf cco:PlanSpecification ;
+                              cco:definition "a decision plan specification is a plan specification that indicates how a decision will be executed, the alternatives that will be considered,  the criteria by which they will judged, and the preferences for those criteria" ;
+                              cco:definition_source "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl" ;
+                              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                              rdfs:label "DecisionPlanSpecification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DecisionSpecification
+cco:DecisionSpecification rdf:type owl:Class ;
+                          rdfs:subClassOf cco:DirectiveInformationContentEntity ;
+                          cco:definition "A directive information content entity that indicates the results of a decision (occurrent) wherein one option is selected from some set of possible alternatives" ;
+                          cco:definition_source "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl" ;
+                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                          rdfs:label "DecisionSpecification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity
+cco:DescriptiveInformationContentEntity rdf:type owl:Class ;
+                                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                        rdfs:label "DescriptiveInformationContentEntity" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DiagnosticProcess
+cco:DiagnosticProcess rdf:type owl:Class ;
+                      rdfs:subClassOf cco:ActOfInvestigation ;
+                      obo:IAO_0000116 "A diagnostic process that is a process of proper cognitive functioning is a process of proper diagnostic functioning according to the paper \"Warranted Diagnosis.\" Def = An investigative process that inputs representations that are warranted, including a clinical picture that is warranted, and, based on these inputs, outputs a warranted assertion to the effect that the patient does or does not have a disease, disease progression, disorder, or combination thereof of a certain type." ;
+                      cco:definition "An investigative process that has as inputs: (1) a clinical picture of a given patient, (2) an aggregate of representations of at least one type of disease, disease course, or disorder and at least one type of phenotype whose instances are associated with instances of that disease, disease course, disorder, or combination thereof, and has as output (3) an assertion based on (1) and (2) to the effect that the patient does or does not have a disease, disease course, disorder, or combination thereof of a certain type." ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                      rdfs:label "DiagnosticProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DirectRepresentation
+cco:DirectRepresentation rdf:type owl:Class ;
+                         rdfs:subClassOf cco:RepresentationThatIsWarranted ;
+                         cco:definition_source "http://ceur-ws.org/Vol-1515/regular10.pdf" ;
+                         cco:elucidation "﻿x is a Representation that is Warranted in some subject s & x is_about y & x comes into existence, as a result of a causal process initiated by y and in a way appropriate to y, in the cognitive system of s." ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                         rdfs:label "DirectRepresentation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity
+cco:DirectiveInformationContentEntity rdf:type owl:Class ;
+                                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                      rdfs:label "DirectiveInformationContentEntity" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DispositionToCognitivelyRepresent
+cco:DispositionToCognitivelyRepresent rdf:type owl:Class ;
+                                      rdfs:subClassOf cco:CognitiveDisposition ;
+                                      cco:definition "A cognitive disposition that is realized in the formation of a cognitive representation." ;
+                                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                      rdfs:label "DispositionToCognitivelyRepresent" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EvaluationProtocol
+cco:EvaluationProtocol rdf:type owl:Class ;
+                       rdfs:subClassOf cco:PlanSpecification ;
+                       cco:definition "An evaluation protocol is a plan specification that details how some variable or entity of interest is to be characterized through a set of measurements, observations, or estimates." ;
+                       cco:definition_source "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl" ;
+                       cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                       rdfs:label "EvaluationProtocol" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/FormalComparing
+cco:FormalComparing rdf:type owl:Class ;
+                    rdfs:subClassOf cco:IsomorphicComparing ;
+                    cco:definition "An IsomorphicComparing that is the process of bringing CognitiveRepresentations about multiple formal systems into one to one correspondence." ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                    rdfs:label "FormalComparing" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Hypothesis
+cco:Hypothesis rdf:type owl:Class ;
+               rdfs:subClassOf cco:DescriptiveInformationContentEntity ;
+               obo:IAO_0000116 "This might be a synonym of 'theory'." ;
+               cco:definition "A descriptive information content entity that participates in an investigative process and describes a portion of reality that is the object of that investigative process." ;
+               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+               rdfs:label "Hypothesis" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IdentificationProcess
+cco:IdentificationProcess rdf:type owl:Class ;
+                          rdfs:subClassOf cco:CognitiveProcess ;
+                          cco:definition "A PropspectiveCognitiveProcess that has a ComparingProcess and a ReasingProcess as subprocesses and realizes a BeliefDisposition the realization of which is the fromation of a BeliefRepresentation about whether some CogntiiveRepresentations are about the same entity." ;
+                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                          rdfs:label "IdentificationProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ImaginationProcess
+cco:ImaginationProcess rdf:type owl:Class ;
+                       rdfs:subClassOf cco:CognitiveProcess ;
+                       cco:definition "A mental process that manipulates mental images and words that go beyond mere memory and thoughts about the objects and entities that the person has encountered, to visualise or consider entities and states of affairs that the person has never encountered and which may not yet exist or obtain in the world." ;
+                       cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                       rdfs:label "ImaginationProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Indicator
+cco:Indicator rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty obo:RO_0000056 ;
+                                                           owl:someValuesFrom cco:ActOfInvestigation
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf obo:BFO_0000001 ;
+              cco:definition "A portion of reality that participates in an investigative process and affect an agent’s estimation that some other portion of reality exists." ;
+              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+              rdfs:label "Indicator" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IndicatorSpecification
+cco:IndicatorSpecification rdf:type owl:Class ;
+                           rdfs:subClassOf cco:DirectiveInformationContentEntity ;
+                           cco:definition "A directive information content entity that prescribes the features of an indicator." ;
+                           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                           rdfs:label "IndicatorSpecification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentComparing
+cco:InformationContentComparing rdf:type owl:Class ;
+                                rdfs:subClassOf cco:SemanticComparing ;
+                                owl:disjointWith cco:IsomorphicComparing ;
+                                cco:definition "A semantic comparing process that compares represented entities based on what portions of reality each is about." ;
+                                cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                rdfs:label "InformationContentComparing" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentComparisonDisposition
+cco:InformationContentComparisonDisposition rdf:type owl:Class ;
+                                            rdfs:subClassOf cco:SemanticComparisonDisposition ;
+                                            cco:definition "A SemanticComparisonDisposition realized in a process of InformationContentComparison." ;
+                                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                            rdfs:label "InformationContentComparisonDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationQualityEntity
+cco:InformationQualityEntity rdf:type owl:Class ;
+                             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                             rdfs:label "InformationQualityEntity" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IntelligenceAnalysis
+cco:IntelligenceAnalysis rdf:type owl:Class ;
+                         rdfs:subClassOf cco:ActOfIntelligenceGathering ;
+                         cco:definition "A process that converts processed information into intelligence through the integration, evaluation, analysis, and interpretation of all source data and the preparation of intelligence products in support of known or anticipated user requirements." ;
+                         cco:definition_source "DOD Dictionary. SOURCE: JP 2-01" ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                         rdfs:comment "These need to be evaluated and moved. #issue -dgl" ;
+                         rdfs:label "IntelligenceAnalysis" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IntelligenceProcess
+cco:IntelligenceProcess rdf:type owl:Class ;
+                        rdfs:subClassOf cco:ActOfIntelligenceGathering ;
+                        cco:definition "A planned process by which information is converted into intelligence and made available to users" ;
+                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                        rdfs:comment "These need to be evaluated and moved. #issue -dgl" ;
+                        rdfs:label "IntelligenceProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IntelligenceReport
+cco:IntelligenceReport rdf:type owl:Class ;
+                       rdfs:subClassOf cco:Report ;
+                       cco:definition "A report of information, usually on a single item, made at any level of command in tactical operations and disseminated as rapidly as possible in keeping with the timeliness of the information." ;
+                       cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                       rdfs:label "IntelligenceReport" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct
+cco:IntentionalAct rdf:type owl:Class ;
+                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                   rdfs:label "IntentionalAct" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IsomorphicComparing
+cco:IsomorphicComparing rdf:type owl:Class ;
+                        rdfs:subClassOf cco:SemanticComparing ;
+                        cco:definition "A semantic comparing process that is based on whether entities can be mapped onto other entities." ;
+                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                        rdfs:label "IsomorphicComparing" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IsomorphicComparisonDisposition
+cco:IsomorphicComparisonDisposition rdf:type owl:Class ;
+                                    rdfs:subClassOf cco:SemanticComparisonDisposition ;
+                                    cco:definition "A SemanticComparisonDisposition realized in a process of IsomorphicComparison." ;
+                                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                    rdfs:label "IsomorphicComparisonDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MentalCapability
+cco:MentalCapability rdf:type owl:Class ;
+                     rdfs:subClassOf cco:BodilyCapability ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                     rdfs:label "MentalCapability" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MentalDisposition
+cco:MentalDisposition rdf:type owl:Class ;
+                      rdfs:subClassOf cco:BodilyDisposition ;
+                      cco:definition "A bodily disposition that is realized in a mental process." ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                      rdfs:label "MentalDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MentalProcess
+cco:MentalProcess rdf:type owl:Class ;
+                  rdfs:subClassOf cco:BodilyProcess ;
+                  cco:elucidation "A bodily process in which a mental quality participates. Examples include thinking, feeling pain, remembering and emotion as occurrent experiences." ;
+                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                  rdfs:label "MentalProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MentalQuality
+cco:MentalQuality rdf:type owl:Class ;
+                  rdfs:subClassOf cco:BodilyQuality ;
+                  obo:IAO_0000116 "We need to add something like 'anatomical structure' to the ontology or change 'anatomical structure' to something already defined. #issue Anatomical structure added but still has issues." ;
+                  cco:definition "﻿A BodilyQuality which specifically depends on an anatomical structure in the cognitive system of an organism." ;
+                  cco:definition_source "http://ceur-ws.org/Vol-1515/regular10.pdf" ;
+                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                  rdfs:label "MentalQuality" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MentalRepresentation
+cco:MentalRepresentation rdf:type owl:Class ;
+                         rdfs:subClassOf cco:MentalQuality ;
+                         cco:definition "a representation which is a mental quality." ;
+                         cco:definition_source "http://ceur-ws.org/Vol-1515/regular10.pdf" ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                         rdfs:comment "The is Ceusters and Smith's definition of cogntive representation. It better applies to mental representation which has cognitive representation as a subclass." ;
+                         rdfs:label "MentalRepresentation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MentalSystem
+cco:MentalSystem rdf:type owl:Class ;
+                 rdfs:subClassOf cco:System ;
+                 cco:definition "A system all of whose parts are also parts of a single organism and which realizes mental dispositions." ;
+                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                 rdfs:label "Mental System" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MethodSpecification
+cco:MethodSpecification rdf:type owl:Class ;
+                        rdfs:subClassOf cco:PlanSpecification ;
+                        cco:definition "a method is a plan specification consisting of a set of action specifications that constitute a generic workflow for realizing some standardized objective" ;
+                        cco:definition_source "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl" ;
+                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                        rdfs:label "MethodSpecification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ModelingProcess
+cco:ModelingProcess rdf:type owl:Class ;
+                    rdfs:subClassOf cco:ActOfAttending ;
+                    cco:definition "a modelign process is an act of appraisal that yields a reproducible representation of the entity in the form of a model" ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                    rdfs:label "ModelingProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/NominalMeasurementInformationContentEntity
+cco:NominalMeasurementInformationContentEntity rdf:type owl:Class ;
+                                               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                               rdfs:label "NominalMeasurementInformationContentEntity" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Non-ReferringRepresentationalUnit
+cco:Non-ReferringRepresentationalUnit rdf:type owl:Class ;
+                                      rdfs:subClassOf cco:RepresentationalUnit ;
+                                      owl:disjointWith cco:ReferringRepresentationalUnit ;
+                                      cco:definition "A RepresentationalUnit which, for whatever reason, fails to be about anything." ;
+                                      cco:definition_source "http://ceur-ws.org/Vol-1515/regular10.pdf" ;
+                                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                      rdfs:label "Non-ReferringRepresentationalUnit" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ObjectiveSpecification
+cco:ObjectiveSpecification rdf:type owl:Class ;
+                           rdfs:subClassOf cco:DirectiveInformationContentEntity ;
+                           cco:definition "A directive information entity that prescribes an intended process endstate." ;
+                           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                           rdfs:comment "I can't find the source for this. #issue -dgl" ;
+                           rdfs:label "ObjectiveSpecification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PerceptualDisposition
+cco:PerceptualDisposition rdf:type owl:Class ;
+                          rdfs:subClassOf cco:MentalDisposition ;
+                          cco:definition "A CognitiveDisposition the realization of which is Perceiving." ;
+                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                          rdfs:label "PerceptualDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PerceivingProcess
+cco:PerceivingProcess rdf:type owl:Class ;
+                      rdfs:subClassOf cco:MentalProcess ;
+                      cco:definition "A mental process which is a) produced by a causal process (for example involving light rays or air vibrations) involving a part of the environment of the organism, and b) is experienced by the organism as being so caused, and c) in which the relevant part of the environment is thereby directly represented to the organism." ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                      rdfs:comment "Alternative def: A CognitiveProcess that is the forming of a DirectRepresentation." ;
+                      rdfs:label "PerceivingProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PlanSpecification
+cco:PlanSpecification rdf:type owl:Class ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                      rdfs:label "PlanSpecification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PositiveConfidenceValue
+cco:PositiveConfidenceValue rdf:type owl:Class ;
+                            rdfs:subClassOf cco:ConfidenceValue ;
+                            cco:definition "A confidence value that when fused with a cognitive representation CR results in the bearing cognitive system treating CR, to some extent, as if it were veridical." ;
+                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                            rdfs:label "PositiveConfidenceValue" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ProcessOfProperCognitiveFunctioning
+cco:ProcessOfProperCognitiveFunctioning rdf:type owl:Class ;
+                                        rdfs:subClassOf cco:CognitiveProcess ;
+                                        obo:IAO_0000116 "This is a defined class but to make that explicit here requires terms for vetting a cognitive process. #issue -dgl" ;
+                                        cco:definition "A cognitive process that has been successfully vetted or designed to reliably form veridical cognitive representations in some type of environment(s)." ;
+                                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                        rdfs:label "ProcessOfProperCognitiveFunctioning" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ProcessingAndExploitation
+cco:ProcessingAndExploitation rdf:type owl:Class ;
+                              rdfs:subClassOf cco:ActOfIntelligenceGathering ;
+                              cco:definition "A planned process which converts collected information into forms suitable to the production of intelligence." ;
+                              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                              rdfs:comment "These need to be evaluated and moved. #issue -dgl" ;
+                              rdfs:label "ProcessingAndExploitation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ReferringRepresentationalUnit
+cco:ReferringRepresentationalUnit rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:RepresentationalUnit ;
+                                  cco:definition "A RepresentationalUnit which is both intended to be about something and does indeed succeed in this intent." ;
+                                  cco:definition_source "http://ceur-ws.org/Vol-1515/regular10.pdf" ;
+                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                  rdfs:label "ReferringRepresentationalUnit" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RejectionDecisionSpecification
+cco:RejectionDecisionSpecification rdf:type owl:Class ;
+                                   rdfs:subClassOf cco:DecisionSpecification ;
+                                   cco:definition "A decision specification that specifies some proposition considered during a decision process is not to be pursue" ;
+                                   cco:definition_source "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl" ;
+                                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                   rdfs:label "RejectionDecisionSpecification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Report
+cco:Report rdf:type owl:Class ;
+           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+           rdfs:label "Report" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Representation
+cco:Representation rdf:type owl:Class ;
+                   rdfs:subClassOf obo:BFO_0000019 ;
+                   cco:definition "A Quality which is_about or intended to be about a portion of reality." ;
+                   cco:definition_source "http://ceur-ws.org/Vol-1515/regular10.pdf" ;
+                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                   rdfs:comment "A term for 'intended to be about' needs to be added to the ontology for the sake of making this a defined class." ;
+                   rdfs:label "Representation" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationThatIsBelieved
+cco:RepresentationThatIsBelieved rdf:type owl:Class ;
+                                 owl:equivalentClass [ owl:intersectionOf ( cco:CognitiveRepresentation
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty cco:is_fused_with ;
+                                                                              owl:someValuesFrom cco:PositiveConfidenceValue
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ] ;
+                                 rdfs:subClassOf cco:CognitiveRepresentation ;
+                                 cco:definition "A cognitive representation that is fused with a positive confidence value." ;
+                                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                 rdfs:label "RepresentationThatIsBelieved" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationThatIsWarranted
+cco:RepresentationThatIsWarranted rdf:type owl:Class ;
+                                  owl:equivalentClass [ owl:intersectionOf ( cco:RepresentationThatIsBelieved
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty cco:is_output_of ;
+                                                                               owl:someValuesFrom cco:ProcessOfProperCognitiveFunctioning
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                  rdfs:subClassOf cco:RepresentationThatIsBelieved ;
+                                  cco:definition "A Representation that is Believed formed through proper cognitive functioning in a vetted- or designed-for environment." ;
+                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                  rdfs:label "RepresentationThatIsWarranted" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalCharacter
+cco:RepresentationalCharacter rdf:type owl:Class ;
+                              rdfs:subClassOf cco:MentalQuality ;
+                              cco:definition "A mental quality that is part of a mental representation and determines the way in which a mental representation is about its portion of reality." ;
+                              cco:definition_source "PAPER: Towards a Foundation for a Realist Ontology of Cognitive Processes." ;
+                              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                              rdfs:label "RepresentationalCharacter" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalComplex
+cco:RepresentationalComplex rdf:type owl:Class ;
+                            rdfs:subClassOf cco:Representation ;
+                            cco:definition_source "'definition source' \"http://ceur-ws.org/Vol-1515/regular10.pdf\"" ;
+                            cco:elucidation "A group of Representations that taken as a whole is a Representation." ;
+                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                            rdfs:label "RepresentationalComplex" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalDirectedness
+cco:RepresentationalDirectedness rdf:type owl:Class ;
+                                 rdfs:subClassOf cco:MentalQuality ;
+                                 cco:definition "A mental quality that is part of a mental representation and determines the way a portion of reality is represented as being." ;
+                                 cco:definition_source "PAPER: Towards a Foundation for a Realist Ontology of Cognitive Processes." ;
+                                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                 rdfs:label "RepresentationalDirectedness" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalMentalProcess
+cco:RepresentationalMentalProcess rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:MentalProcess ;
+                                  cco:definition "a mental process that is the coming into being, sustaining, modifying, or terminating a mental representation." ;
+                                  cco:definition_source "PAPER: Towards a Foundation for a Realist Ontology of Cognitive Processes." ;
+                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                  rdfs:label "RepresentationalMentalProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalUnit
+cco:RepresentationalUnit rdf:type owl:Class ;
+                         rdfs:subClassOf cco:Representation ;
+                         cco:definition "The smallest constituent sub-representation." ;
+                         cco:definition_source "http://ceur-ws.org/Vol-1515/regular10.pdf" ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                         rdfs:label "RepresentationalUnit" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalUnitComponent
+cco:RepresentationalUnitComponent rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:RepresentationalUnit ;
+                                  cco:definition "A component of a Representation that is not intended by the artifact's authors to refer in isolation." ;
+                                  cco:definition_source "http://ceur-ws.org/Vol-1515/regular10.pdf" ;
+                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                  rdfs:label "RepresentationalUnitComponent" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ResemblanceComparing
+cco:ResemblanceComparing rdf:type owl:Class ;
+                         rdfs:subClassOf cco:CognitiveProcessOfComparing ;
+                         owl:disjointWith cco:SemanticComparing ;
+                         cco:definition "A cognitive process of comparing that compares represented entities based on what universals each has in common." ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                         rdfs:label "ResemblanceComparing" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ResemblanceComparisonDisposition
+cco:ResemblanceComparisonDisposition rdf:type owl:Class ;
+                                     rdfs:subClassOf cco:CognitiveComparisonDisposition ;
+                                     cco:definition "A ComparisonDisposition realized in a process of ResemblanceComparison." ;
+                                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                     rdfs:label "ResemblanceComparisonDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SelectionDecisionSpecification
+cco:SelectionDecisionSpecification rdf:type owl:Class ;
+                                   rdfs:subClassOf cco:DecisionSpecification ;
+                                   cco:definition "A decision specification that specifies that a decision process has identifed one alternative to be pursued from a set of possible alternatives." ;
+                                   cco:definition_source "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl" ;
+                                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                   rdfs:label "SelectionDecisionSpecification" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SemanticComparing
+cco:SemanticComparing rdf:type owl:Class ;
+                      rdfs:subClassOf cco:CognitiveProcessOfComparing ;
+                      cco:definition "A cognitive process of comparing that compares entities based on what each is about." ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                      rdfs:label "SemanticComparing" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SemanticComparisonDisposition
+cco:SemanticComparisonDisposition rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:CognitiveComparisonDisposition ;
+                                  cco:definition "A ComparisonDisposition realized in a process of SemanticComparison." ;
+                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                  rdfs:label "SemanticComparisonDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SemanticInferenceDisposition
+cco:SemanticInferenceDisposition rdf:type owl:Class ;
+                                 rdfs:subClassOf cco:CognitiveInferenceDisposition ;
+                                 cco:definition "A ReasoningDisposition realized in a process of Semantic Reasoning." ;
+                                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                 rdfs:label "SemanticInferenceDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SemanticInferringProcess
+cco:SemanticInferringProcess rdf:type owl:Class ;
+                             rdfs:subClassOf cco:CognitiveProcessOfInferring ;
+                             cco:definition "A cognitive process of reasoning that exploits the semantic relationships between representations." ;
+                             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                             rdfs:label "SemanticInferringProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/StateOfAlertness
+cco:StateOfAlertness rdf:type owl:Class ;
+                     rdfs:subClassOf cco:ActOfAttending ;
+                     cco:definition "An act of attending which has high sensory awareness such as to be watchful and prompt to meet danger or emergency, or being quick to perceive and act." ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                     rdfs:label "StateOfAlertness" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/StateOfVigilance
+cco:StateOfVigilance rdf:type owl:Class ;
+                     rdfs:subClassOf cco:ActOfAttending ;
+                     cco:definition "An act of attending which occurs over prolonged periods of time." ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                     rdfs:label "StateOfVigilance" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SyntacticInferenceDisposition
+cco:SyntacticInferenceDisposition rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:CognitiveInferenceDisposition ;
+                                  cco:definition "A ReasoningDisposition realized in a process of SyntacticReasoning." ;
+                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                  rdfs:label "SyntacticInferenceDisposition" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SyntacticInferringProcess
+cco:SyntacticInferringProcess rdf:type owl:Class ;
+                              rdfs:subClassOf cco:CognitiveProcessOfInferring ;
+                              cco:definition "A cognitive process of reasoning that exploits the syntactic relationships between representations." ;
+                              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                              rdfs:label "SyntacticInferringProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/System
+cco:System rdf:type owl:Class ;
+           rdfs:subClassOf obo:BFO_0000040 ;
+           cco:definition "A material entity that consists of multiple components that are causally integrated." ;
+           cco:definition_source "http://www.ontobee.org/ontology/RO?iri=http://purl.obolibrary.org/obo/RO_0002577" ;
+           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+           rdfs:label "System" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/UnrecognizedNon-ReferringRepresentationalUnit
+cco:UnrecognizedNon-ReferringRepresentationalUnit rdf:type owl:Class ;
+                                                  rdfs:subClassOf cco:Non-ReferringRepresentationalUnit ;
+                                                  cco:definition "A Non-RefferingRepresentationalUnit which, although non-referring, is intended and believed to be about something." ;
+                                                  cco:definition_source "http://ceur-ws.org/Vol-1515/regular10.pdf" ;
+                                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                                  rdfs:label "UnrecognizedNon-ReferringRepresentationalUnit" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/WarrantedAssertion
+cco:WarrantedAssertion rdf:type owl:Class ;
+                       rdfs:subClassOf cco:Assertion ;
+                       cco:definition "An assertion that is based on a representation that is warranted." ;
+                       cco:definition_source "PAPER: WARRANTED DIAGNOSIS" ;
+                       cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                       rdfs:label "WarrantedAssertion" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( cco:RepresentationalComplex
+                cco:RepresentationalUnit
+                cco:RepresentationalUnitComponent
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
