@@ -3,3 +3,4 @@ TESTING GITHUB
 Does GitHub work? - Eric
 Hey Bob! Try answering me on this! =D -Eric
 It's a trap! Don't answer!
+And this is why you always leave a note!
