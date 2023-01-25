@@ -12,13 +12,13 @@
 <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> rdf:type owl:Ontology ;
                                                                                           owl:versionIRI <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/2019-07-15/CognitiveProcessOntology> ;
                                                                                           owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AllCoreOntology> ;
-                                                                                          rdfs:label "Cognitive Process Ontology" ;
                                                                                           dc:contributor "Barry Smith" ,
+                                                                                                         "David Gordon Limbaugh" ,
                                                                                                          "David Kasmier" ;
-                                                                                          owl:versionInfo "Version 0.8" ;
-                                                                                          dc:contributor "David Gordon Limbaugh" ;
-                                                                                          owl:versionInfo "July 15, 2019" ;
-                                                                                          rdfs:comment "This ontology is designed to represent the acts performed during the collection of information and generation of intelligence products" .
+                                                                                          rdfs:comment "This ontology is designed to represent the acts performed during the collection of information and generation of intelligence products" ;
+                                                                                          rdfs:label "Cognitive Process Ontology" ;
+                                                                                          owl:versionInfo "January 25, 2023" ,
+                                                                                                          "Version 0.9" .
 
 #################################################################
 #    Object Properties
@@ -193,6 +193,14 @@ cco:ActOfRequestingInformation rdf:type owl:Class ;
                                rdfs:label "ActOfRequestingInformation" .
 
 
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfRequestingInformationCollection
+cco:ActOfRequestingInformationCollection rdf:type owl:Class ;
+                                         rdfs:subClassOf cco:ActOfRequestingInformation ;
+                                         cco:definition "An act of directive communication that prescribes an act of information collection." ;
+                                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                                         rdfs:label "ActOfRequestingInformationCollection" .
+
+
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfRequestingInformationRetrieval
 cco:ActOfRequestingInformationRetrieval rdf:type owl:Class ;
                                         rdfs:subClassOf cco:ActOfRequestingInformation ;
@@ -216,14 +224,6 @@ cco:ActionSpecification rdf:type owl:Class ;
                         cco:definition "a directive information entity that prescribes an action." ;
                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
                         rdfs:label "ActionSpecification" .
-
-
-###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfRequestingInformationCollection
-cco:ActOfRequestingInformationCollection rdf:type owl:Class ;
-                                         rdfs:subClassOf cco:ActOfRequestingInformation ;
-                                         cco:definition "An act of directive communication that prescribes an act of information collection." ;
-                                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
-                                         rdfs:label "ActOfRequestingInformationCollection" .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/AffectiveRepresentation
@@ -811,14 +811,6 @@ cco:ObjectiveSpecification rdf:type owl:Class ;
                            rdfs:label "ObjectiveSpecification" .
 
 
-###  http://www.ontologyrepository.com/CommonCoreOntologies/PerceptualDisposition
-cco:PerceptualDisposition rdf:type owl:Class ;
-                          rdfs:subClassOf cco:MentalDisposition ;
-                          cco:definition "A CognitiveDisposition the realization of which is Perceiving." ;
-                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
-                          rdfs:label "PerceptualDisposition" .
-
-
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/PerceivingProcess
 cco:PerceivingProcess rdf:type owl:Class ;
                       rdfs:subClassOf cco:MentalProcess ;
@@ -826,6 +818,14 @@ cco:PerceivingProcess rdf:type owl:Class ;
                       cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
                       rdfs:comment "Alternative def: A CognitiveProcess that is the forming of a DirectRepresentation." ;
                       rdfs:label "PerceivingProcess" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PerceptualDisposition
+cco:PerceptualDisposition rdf:type owl:Class ;
+                          rdfs:subClassOf cco:MentalDisposition ;
+                          cco:definition "A CognitiveDisposition the realization of which is Perceiving." ;
+                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
+                          rdfs:label "PerceptualDisposition" .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/PlanSpecification
@@ -849,6 +849,13 @@ cco:ProcessOfProperCognitiveFunctioning rdf:type owl:Class ;
                                         cco:definition "A cognitive process that has been successfully vetted or designed to reliably form veridical cognitive representations in some type of environment(s)." ;
                                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
                                         rdfs:label "ProcessOfProperCognitiveFunctioning" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ProcessOfProperFunctioning
+cco:ProcessOfProperFunctioning rdf:type owl:Class ;
+                               rdfs:subClassOf obo:BFO_0000015 ;
+                               cco:definition "A process that has been successfully vetted or designed to reliably form outputs that meet some standard, in environments of given types, and is occurring in an instance of such an environment."@en ;
+                               rdfs:label "Process of Proper Functioning"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ProcessingAndExploitation
@@ -1109,4 +1116,4 @@ cco:WarrantedAssertion rdf:type owl:Class ;
 ] .
 
 
-###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
