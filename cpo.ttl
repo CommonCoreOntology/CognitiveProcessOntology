@@ -844,7 +844,11 @@ cco:PositiveConfidenceValue rdf:type owl:Class ;
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ProcessOfProperCognitiveFunctioning
 cco:ProcessOfProperCognitiveFunctioning rdf:type owl:Class ;
-                                        rdfs:subClassOf cco:CognitiveProcess ;
+                                        owl:equivalentClass [ owl:intersectionOf ( cco:CognitiveProcess
+                                                                                   cco:ProcessOfProperCognitiveFunctioning
+                                                                                 ) ;
+                                                              rdf:type owl:Class
+                                                            ] ;
                                         obo:IAO_0000116 "This is a defined class but to make that explicit here requires terms for vetting a cognitive process. #issue -dgl" ;
                                         cco:definition "A cognitive process that has been successfully vetted or designed to reliably form veridical cognitive representations in some type of environment(s)." ;
                                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" ;
