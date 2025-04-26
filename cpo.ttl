@@ -1115,7 +1115,6 @@ cco:WarrantedAssertion rdf:type owl:Class ;
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( cco:RepresentationalComplex
                 cco:RepresentationalUnit
-                cco:RepresentationalUnitComponent
               )
 ] .
 
