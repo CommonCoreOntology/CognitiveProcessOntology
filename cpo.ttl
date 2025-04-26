@@ -63,7 +63,7 @@ cco:AcceptanceDecisionSpecification rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfAttending
 cco:ActOfAttending rdf:type owl:Class ;
                    rdfs:subClassOf cco:PerceivingProcess ;
-                   skos:definition "The process whereby relevant aspects of our mental experience are focused on specific portions of reality."@en ;
+                   skos:definition "A Perceiving Process whereby relevant aspects of one's mental experience are focused on specific portions of reality."@en ;
                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                    rdfs:label "Act of Attending"@en .
 
@@ -238,7 +238,7 @@ cco:AffectiveRepresentation rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/AnalogyComparing
 cco:AnalogyComparing rdf:type owl:Class ;
                      rdfs:subClassOf cco:IsomorphicComparing ;
-                     skos:definition "An IsomorphicComparing in which an AnalogyReprosentation and some other CognitiveRepresentation participate and are compared for the sake of reasoning and forming new representations that are believed."@en ;
+                     skos:definition "An Isomorphic Comparing in which an AnalogyReprosentation and some other CognitiveRepresentation participate and are compared for the sake of reasoning and forming new representations that are believed."@en ;
                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                      rdfs:label "Analogy Comparing"@en .
 
@@ -371,7 +371,7 @@ cco:CognitiveComparisonDisposition rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveDisposition
 cco:CognitiveDisposition rdf:type owl:Class ;
                          rdfs:subClassOf cco:MentalDisposition ;
-                         skos:definition "A MentalDisposition realized in a CognitiveProcess"@en ;
+                         skos:definition "A Mental Disposition realized in a CognitiveProcess"@en ;
                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                          rdfs:label "Cognitive Disposition"@en .
 
@@ -436,7 +436,7 @@ cco:CognitiveRepresentationFormation rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveUtilizationDisposition
 cco:CognitiveUtilizationDisposition rdf:type owl:Class ;
                                     rdfs:subClassOf cco:CognitiveDisposition ;
-                                    skos:definition "A CognitiveDisposition the realization of which is the formation of a RetrospectiveDisposition."@en ;
+                                    skos:definition "A Cognitive Disposition the realization of which is the formation of a RetrospectiveDisposition."@en ;
                                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                                     rdfs:label "Cognitive Utilization Disposition"@en .
 
@@ -581,7 +581,7 @@ cco:EvaluationProtocol rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/FormalComparing
 cco:FormalComparing rdf:type owl:Class ;
                     rdfs:subClassOf cco:IsomorphicComparing ;
-                    skos:definition "An IsomorphicComparing that is the process of bringing CognitiveRepresentations about multiple formal systems into one to one correspondence."@en ;
+                    skos:definition "An Isomorphic Comparing that is the process of bringing CognitiveRepresentations about multiple formal systems into one to one correspondence."@en ;
                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                     rdfs:label "Formal Comparing"@en .
 
@@ -598,7 +598,7 @@ cco:Hypothesis rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/IdentificationProcess
 cco:IdentificationProcess rdf:type owl:Class ;
                           rdfs:subClassOf cco:CognitiveProcess ;
-                          skos:definition "A PropspectiveCognitiveProcess that has a ComparingProcess and a ReasingProcess as subprocesses and realizes a BeliefDisposition the realization of which is the fromation of a BeliefRepresentation about whether some CogntiiveRepresentations are about the same entity."@en ;
+                          skos:definition "A Propspective Cognitive Process that has a Comparing Process and a Reasoning Process as subprocesses and realizes a Belief Disposition the realization of which is the formation of a Belief Representation about whether some Cognitive Representations are about the same entity."@en ;
                           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                           rdfs:label "Identification Process"@en .
 
@@ -647,7 +647,7 @@ cco:InformationContentComparing rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentComparisonDisposition
 cco:InformationContentComparisonDisposition rdf:type owl:Class ;
                                             rdfs:subClassOf cco:SemanticComparisonDisposition ;
-                                            skos:definition "A SemanticComparisonDisposition realized in a process of InformationContentComparison."@en ;
+                                            skos:definition "A Semantic Comparison Disposition realized in a process of Information Content Comparison."@en ;
                                             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                                             rdfs:label "Information Content Comparison Disposition"@en .
 
@@ -690,7 +690,7 @@ cco:IsomorphicComparing rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/IsomorphicComparisonDisposition
 cco:IsomorphicComparisonDisposition rdf:type owl:Class ;
                                     rdfs:subClassOf cco:SemanticComparisonDisposition ;
-                                    skos:definition "A SemanticComparisonDisposition realized in a process of IsomorphicComparison."@en ;
+                                    skos:definition "A Semantic Comparison Disposition realized in a process of Isomorphic Comparison."@en ;
                                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                                     rdfs:label "Isomorphic Comparison Disposition"@en .
 
@@ -767,7 +767,7 @@ cco:ModelingProcess rdf:type owl:Class ;
 cco:Non-ReferringRepresentationalUnit rdf:type owl:Class ;
                                       rdfs:subClassOf cco:RepresentationalUnit ;
                                       owl:disjointWith cco:ReferringRepresentationalUnit ;
-                                      skos:definition "A RepresentationalUnit which, for whatever reason, fails to be about anything."@en ;
+                                      skos:definition "A Representational Unit which, for whatever reason, fails to be about anything."@en ;
                                       cco:definition_source "http://ceur-ws.org/Vol-1515/regular10.pdf"@en ;
                                       cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                                       rdfs:label "Non-Referring Representational Unit"@en .
@@ -794,7 +794,7 @@ cco:PerceivingProcess rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/PerceptualDisposition
 cco:PerceptualDisposition rdf:type owl:Class ;
                           rdfs:subClassOf cco:MentalDisposition ;
-                          skos:definition "A CognitiveDisposition the realization of which is Perceiving."@en ;
+                          skos:definition "A Cognitive Disposition the realization of which is Perceiving."@en ;
                           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                           rdfs:label "Perceptual Disposition"@en .
 
@@ -845,7 +845,7 @@ cco:ProcessingAndExploitation rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ReferringRepresentationalUnit
 cco:ReferringRepresentationalUnit rdf:type owl:Class ;
                                   rdfs:subClassOf cco:RepresentationalUnit ;
-                                  skos:definition "A RepresentationalUnit which is both intended to be about something and does indeed succeed in this intent."@en ;
+                                  skos:definition "A Representational Unit which is both intended to be about something and does indeed succeed in this intent."@en ;
                                   cco:definition_source "http://ceur-ws.org/Vol-1515/regular10.pdf"@en ;
                                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                                   rdfs:label "Referring Representational Unit"@en .
@@ -974,7 +974,7 @@ cco:ResemblanceComparing rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ResemblanceComparisonDisposition
 cco:ResemblanceComparisonDisposition rdf:type owl:Class ;
                                      rdfs:subClassOf cco:CognitiveComparisonDisposition ;
-                                     skos:definition "A ComparisonDisposition realized in a process of ResemblanceComparison."@en ;
+                                     skos:definition "A Comparison Disposition realized in a process of Resemblance Comparison."@en ;
                                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                                      rdfs:label "Resemblance Comparison Disposition"@en .
 
@@ -999,7 +999,7 @@ cco:SemanticComparing rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/SemanticComparisonDisposition
 cco:SemanticComparisonDisposition rdf:type owl:Class ;
                                   rdfs:subClassOf cco:CognitiveComparisonDisposition ;
-                                  skos:definition "A ComparisonDisposition realized in a process of SemanticComparison."@en ;
+                                  skos:definition "A Comparison Disposition realized in a process of Semantic Comparison."@en ;
                                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                                   rdfs:label "Semantic Comparison Disposition"@en .
 
@@ -1007,7 +1007,7 @@ cco:SemanticComparisonDisposition rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/SemanticInferenceDisposition
 cco:SemanticInferenceDisposition rdf:type owl:Class ;
                                  rdfs:subClassOf cco:CognitiveInferenceDisposition ;
-                                 skos:definition "A ReasoningDisposition realized in a process of Semantic Reasoning."@en ;
+                                 skos:definition "A Reasoning Disposition realized in a process of Semantic Reasoning."@en ;
                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                                  rdfs:label "Semantic Inference Disposition"@en .
 
@@ -1039,7 +1039,7 @@ cco:StateOfVigilance rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/SyntacticInferenceDisposition
 cco:SyntacticInferenceDisposition rdf:type owl:Class ;
                                   rdfs:subClassOf cco:CognitiveInferenceDisposition ;
-                                  skos:definition "A ReasoningDisposition realized in a process of SyntacticReasoning."@en ;
+                                  skos:definition "A Reasoning Disposition realized in a process of Syntactic Reasoning."@en ;
                                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                                   rdfs:label "Syntactic Inference Disposition"@en .
 
@@ -1064,7 +1064,7 @@ cco:System rdf:type owl:Class ;
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/UnrecognizedNon-ReferringRepresentationalUnit
 cco:UnrecognizedNon-ReferringRepresentationalUnit rdf:type owl:Class ;
                                                   rdfs:subClassOf cco:Non-ReferringRepresentationalUnit ;
-                                                  skos:definition "A Non-RefferingRepresentationalUnit which, although non-referring, is intended and believed to be about something."@en ;
+                                                  skos:definition "A Non-Reffering Representational Unit which, although non-referring, is intended and believed to be about something."@en ;
                                                   cco:definition_source "http://ceur-ws.org/Vol-1515/regular10.pdf"@en ;
                                                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI ;
                                                   rdfs:label "UnrecognizedNon-ReferringRepresentationalUnit"@en .
