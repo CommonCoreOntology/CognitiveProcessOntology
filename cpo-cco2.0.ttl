@@ -1,0 +1,1082 @@
+@prefix : <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cceo: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix cco2: <https://www.commoncoreontologies.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> rdf:type owl:Ontology ;
+                                                                                          owl:versionIRI <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/2025-04-25/CognitiveProcessOntology> ;
+                                                                                          owl:imports <https://www.commoncoreontologies.org/2024-11-06/CommonCoreOntologiesMerged> ;
+                                                                                          dcterms:contributor "Barry Smith" ,
+                                                                                                              "David Gordon Limbaugh" ,
+                                                                                                              "David Kasmier" ,
+                                                                                                              "Jonathan Vajda" ;
+                                                                                          dcterms:description "This ontology is designed to represent the acts performed during the collection of information and generation of intelligence products"@en ;
+                                                                                          rdfs:label "Cognitive Process Ontology"@en ;
+                                                                                          owl:versionInfo "Version 0.92"@en ,
+                                                                                                          "April 28, 2025" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000116
+obo:IAO_0000116 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001754
+cco2:ont00001754 rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001760
+cco2:ont00001760 rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_evidence_for
+cceo:is_evidence_for rdf:type owl:ObjectProperty ;
+                     rdfs:label "is evidence for"@en ;
+                     skos:definition "A relation between Cognitive Representations that fixes a Confidence Representation about a Cognitive Representation."@en ;
+                     cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_fused_with
+cceo:is_fused_with rdf:type owl:ObjectProperty ;
+                   rdfs:comment "‘Fusion’ is a term adapted from Husserl (who in turn takes it from Stumpf and is a primitive relationship that obtains between multiple quality instances when they are so closely related that an additional quality instance seems to emerge from them."@en ,
+                                "Take for example what appears to be a solid green image displayed on a television screen, which upon very close inspection is revealed to have a color made out of tiny yellow and blue squares (or pixels), which give a green appearance to the naked eye. The pixels are bearers of many instances of yellow and blue, and these instances appear to have fused into an additional instance of greenness. Similarly, when an instance of a cognitive representation and an instance of positive confidence value are fused together in a cognitive system there seems to be an additional quality instance: an instance of an RTB." ;
+                   rdfs:label "is fused with"@en ;
+                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001816
+cco2:ont00001816 rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AcceptanceDecision
+cceo:AcceptanceDecision rdf:type owl:Class ;
+                        rdfs:subClassOf cceo:Decision ;
+                        rdfs:label "Acceptance Decision"@en ;
+                        cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AcceptanceDecisionSpecification
+cceo:AcceptanceDecisionSpecification rdf:type owl:Class ;
+                                     rdfs:subClassOf cceo:DecisionSpecification ;
+                                     rdfs:label "Acceptance Decision Specification"@en ;
+                                     skos:definition "A decision specificaiton that specifies that some proposition in a binary decision is to be carried out"@en ;
+                                     cco2:ont00001754 "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"@en ;
+                                     cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfAttending
+cceo:ActOfAttending rdf:type owl:Class ;
+                    rdfs:subClassOf cceo:PerceivingProcess ;
+                    rdfs:label "Act of Attending"@en ;
+                    skos:definition "A Perceiving Process whereby relevant aspects of one's mental experience are focused on specific portions of reality."@en ;
+                    cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCharacterization
+cceo:ActOfCharacterization rdf:type owl:Class ;
+                           rdfs:subClassOf cco2:ont00000228 ;
+                           rdfs:label "Act of Characterization"@en ;
+                           skos:definition "The act of describing distinctive characteristics of some portion of reality."@en ;
+                           cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCritique
+cceo:ActOfCritique rdf:type owl:Class ;
+                   rdfs:subClassOf cceo:ActOfEvaluation ;
+                   rdfs:label "Act of Critique"@en ;
+                   skos:definition "a detalied assessment of some portion of reality that was intentionally created."@en ;
+                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfEvaluation
+cceo:ActOfEvaluation rdf:type owl:Class ;
+                     rdfs:subClassOf cceo:ActOfAttending ;
+                     rdfs:label "Act of Evaluation"@en ;
+                     skos:definition "A cognitive process that systematically appraises the significance or value of some portion of reality according to specified objectives and criteria."@en ;
+                     cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfInformationCollection
+cceo:ActOfInformationCollection rdf:type owl:Class ;
+                                rdfs:subClassOf cco2:ont00000228 ;
+                                rdfs:label "Act of Information Collection"@en ;
+                                skos:definition "A process in response to an act of requesting information collection that is the acquiring of information that is not currently had by the agent's organization and the delivering of that informaiton to the requesting agent."@en ;
+                                cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfInformationRetrieval
+cceo:ActOfInformationRetrieval rdf:type owl:Class ;
+                               rdfs:subClassOf cco2:ont00000228 ;
+                               rdfs:label "Act of Information Retrieval"@en ;
+                               skos:definition "A process in response to an act of requesting information retrieval that is the acquiring of information, had by the agent's organization, and devivering it to the requesting agent."@en ;
+                               cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfInterpretation
+cceo:ActOfInterpretation rdf:type owl:Class ;
+                         rdfs:subClassOf cco2:ont00000228 ;
+                         rdfs:label "Act of Interpretation"@en ;
+                         skos:definition "An intentional act of elucidation, explication, or explanation of the meaning or significance of some portion of reality."@en ;
+                         cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfInvestigation
+cceo:ActOfInvestigation rdf:type owl:Class ;
+                        rdfs:subClassOf cceo:CognitiveProcess ;
+                        rdfs:label "Act of Investigation"@en ;
+                        skos:definition "A cognitive process whose agent intends to establish or confirm that some portion of reality exists or does not exist."@en ;
+                        cco2:ont00001754 "PAPER: WARRANTED DIAGNOSIS"@en ;
+                        cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfJudging
+cceo:ActOfJudging rdf:type owl:Class ;
+                  rdfs:subClassOf cceo:CognitiveProcess ;
+                  rdfs:label "Act of Judging"@en ;
+                  skos:definition "Judging is the evaluation of evidence to make a decision or form a belief."@en ;
+                  cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfMonitoring
+cceo:ActOfMonitoring rdf:type owl:Class ;
+                     rdfs:subClassOf cceo:ActOfInvestigation ;
+                     rdfs:comment "This was originally a subclass of CCO:Act of Observation, however seems better suited to be a subclass of an Act of Investigation."@en ,
+                                  "This needs work to distinguish it from, for example, the act of answering the door." ;
+                     rdfs:label "Act of Monitoring"@en ;
+                     skos:definition "An act of investigation wherby an agent waits for a change in, and observes, a circumstance with the intention of confirming or disconfirming the existence of some portion of reality."@en ;
+                     cco2:ont00001754 "Google Dictionary"@en ;
+                     cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfQuestioning
+cceo:ActOfQuestioning rdf:type owl:Class ;
+                      rdfs:subClassOf cceo:CognitiveProcess ;
+                      rdfs:label "Act of Questioning"@en ;
+                      skos:definition "A cogntiive process that is an act of requesting information."@en ;
+                      cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfRequestingAnInvestigation
+cceo:ActOfRequestingAnInvestigation rdf:type owl:Class ;
+                                    rdfs:subClassOf cceo:ActOfInformationCollection ;
+                                    rdfs:label "Act of Requesting an Investigation"@en ;
+                                    cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfRequestingInformation
+cceo:ActOfRequestingInformation rdf:type owl:Class ;
+                                rdfs:subClassOf cco2:ont00000769 ;
+                                rdfs:label "Act of Requesting Information"@en ;
+                                skos:definition "A directive communication act that prescribes the finding and delivering of information."@en ;
+                                cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfRequestingInformationCollection
+cceo:ActOfRequestingInformationCollection rdf:type owl:Class ;
+                                          rdfs:subClassOf cceo:ActOfRequestingInformation ;
+                                          rdfs:label "Act of Requesting Information Collection"@en ;
+                                          skos:definition "An act of directive communication that prescribes an act of information collection."@en ;
+                                          cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfRequestingInformationRetrieval
+cceo:ActOfRequestingInformationRetrieval rdf:type owl:Class ;
+                                         rdfs:subClassOf cceo:ActOfRequestingInformation ;
+                                         rdfs:label "Act of Requesting Information Retrieval"@en ;
+                                         skos:definition "An act of directive communication that prescribes an act of information retrieval."@en ;
+                                         cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfValidation
+cceo:ActOfValidation rdf:type owl:Class ;
+                     rdfs:subClassOf cco2:ont00001251 ;
+                     rdfs:comment "These need to be evaluated and moved. #issue -dgl"@en ;
+                     rdfs:label "Act of Validation"@en ;
+                     skos:definition "A planned process that confirms that an intelligence collection or production requirement is sufficiently important to justify the dedication of intelligence resources, does not duplicate an existing requirement, and has not been previously satisfied."@en ;
+                     cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionSpecification
+cceo:ActionSpecification rdf:type owl:Class ;
+                         rdfs:subClassOf cco2:ont00000965 ;
+                         rdfs:label "Action Specification"@en ;
+                         skos:definition "a directive information entity that prescribes an action."@en ;
+                         cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AffectiveRepresentation
+cceo:AffectiveRepresentation rdf:type owl:Class ;
+                             rdfs:subClassOf cceo:MentalRepresentation ;
+                             rdfs:label "Affective Representation"@en ;
+                             skos:scopeNote "A mental representation that has no direction of fit but is purely, and subjectively, evaluative."@en ;
+                             cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AnalogyComparing
+cceo:AnalogyComparing rdf:type owl:Class ;
+                      rdfs:subClassOf cceo:IsomorphicComparing ;
+                      rdfs:label "Analogy Comparing"@en ;
+                      skos:definition "An Isomorphic Comparing in which an AnalogyReprosentation and some other CognitiveRepresentation participate and are compared for the sake of reasoning and forming new representations that are believed."@en ;
+                      cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AnatomicalStructure
+cceo:AnatomicalStructure rdf:type owl:Class ;
+                         rdfs:subClassOf obo:BFO_0000030 ;
+                         rdfs:comment "Definition adapted form the Foundational Model of Anatomy (FMA). FMA has a number of parent classes that are not included here. This is an unresolved issue. #issue -dgl"@en ;
+                         rdfs:label "Anatomical Structure"@en ;
+                         skos:definition "An object which is generated by coordinated expression of the organism's own genes that guide its morphogenesis; has inherent 3D shape; its parts are connected and spatially related to one another in patterns determined by coordinated gene expression. Examples: embryo, mesoderm, heart, right ventricle, mitral valve, myocardium, endothelium, lymphocyte, fibroblast, thorax, cardiovascular system, hemoglobin, T cell receptor."@en ;
+                         cco2:ont00001754 "https://bioportal.bioontology.org/ontologies/FMA/?p=classes&conceptid=http%3A%2F%2Fpurl.org%2Fsig%2Font%2Ffma%2Ffma62955"@en ;
+                         cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ApprovalDecisionSpecification
+cceo:ApprovalDecisionSpecification rdf:type owl:Class ;
+                                   rdfs:subClassOf cceo:AcceptanceDecision ;
+                                   rdfs:label "Approval Decision Specification"@en ;
+                                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Assertion
+cceo:Assertion rdf:type owl:Class ;
+               rdfs:subClassOf cco2:ont00000314 ;
+               rdfs:label "Assertion"@en ;
+               skos:definition "An information quality entity that is the concretization of a descriptive information content entity."@en ;
+               cco2:ont00001754 "PAPER: WARRANTED DIAGNOSIS"@en ;
+               cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AssertionMethod
+cceo:AssertionMethod rdf:type owl:Class ;
+                     rdfs:subClassOf cco2:ont00000965 ;
+                     rdfs:label "Assertion Method"@en ;
+                     skos:definition "A directive information entity that specifies an algorithm or heuristics for evaluating evidence in the process of making an assertion."@en ;
+                     cco2:ont00001754 "http://www.evidenceontology.org/"@en ;
+                     cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AuthorizationDecision
+cceo:AuthorizationDecision rdf:type owl:Class ;
+                           rdfs:subClassOf cceo:AcceptanceDecision ;
+                           rdfs:label "Authorization Decision"@en ;
+                           skos:definition "an authorization decision is an acceptance decision specification that additionally reflects an exercise of authority in the form of an act of granting permission."@en ;
+                           cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/BeliefDisposition
+cceo:BeliefDisposition rdf:type owl:Class ;
+                       rdfs:subClassOf cceo:DispositionToCognitivelyRepresent ;
+                       rdfs:label "Belief Disposition"@en ;
+                       skos:definition "A Disposition to Cognitively Represent that is realized in the formation of a Representation that is Believed."@en ;
+                       cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/BeliefFormation
+cceo:BeliefFormation rdf:type owl:Class ;
+                     rdfs:subClassOf cceo:CognitiveRepresentationFormation ;
+                     rdfs:label "Belief Formation"@en ;
+                     skos:definition "A Cognitive Representation Formation that just is the formation of a Representation that is Believed."@en ;
+                     cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/BodilyCapability
+cceo:BodilyCapability rdf:type owl:Class ;
+                      rdfs:subClassOf cceo:Capability ;
+                      rdfs:label "Bodily Capability"@en ;
+                      cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/BodilyDisposition
+cceo:BodilyDisposition rdf:type owl:Class ;
+                       rdfs:subClassOf obo:BFO_0000016 ;
+                       rdfs:label "Bodily Disposition"@en ;
+                       skos:definition "A disposition that inheres in some extended organism. Examples are: my disposition to catch a cold when exposed to a virus, my ability to speak the English language."@en ;
+                       cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/BodilyProcess
+cceo:BodilyProcess rdf:type owl:Class ;
+                   rdfs:subClassOf obo:BFO_0000015 ;
+                   rdfs:comment "#issue needs definition -dgl"@en ;
+                   rdfs:label "Bodily Process"@en ;
+                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/BodilyQuality
+cceo:BodilyQuality rdf:type owl:Class ;
+                   rdfs:subClassOf obo:BFO_0000019 ;
+                   rdfs:comment "#issue needs definition"@en ;
+                   rdfs:label "Bodily Quality"@en ;
+                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Capability
+cceo:Capability rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000016 ;
+                rdfs:comment "There is a proposal to make 'function' a subclass of 'capability'. This is not reflected here."@en ;
+                rdfs:label "Capability"@en ;
+                skos:definition "A disposition whose realization in the normal case brings benefits to an organism or group of organisms, where \"in the normal case\" means not only in the normal range on the scale, but also in a context which is normal for the group to which the bearer or user belongs."@en ;
+                cco2:ont00001754 "https://github.com/NCOR-US/Capabilities/wiki/The-Account-of-Capabilities"@en ;
+                cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Classification
+cceo:Classification rdf:type owl:Class ;
+                    rdfs:subClassOf cco2:ont00000293 ;
+                    rdfs:comment "I can't find a defintion for this in DO #issue -dgl"@en ;
+                    rdfs:label "Classification"@en ;
+                    cco2:ont00001754 "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"@en ;
+                    cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveAssociationDisposition
+cceo:CognitiveAssociationDisposition rdf:type owl:Class ;
+                                     rdfs:subClassOf cceo:CognitiveUtilizationDisposition ;
+                                     rdfs:label "Cognitive Association Disposition"@en ;
+                                     skos:definition "A Cognitive Utilization Disposition realized in a Cognitive Process of Association."@en ;
+                                     cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveComparisonDisposition
+cceo:CognitiveComparisonDisposition rdf:type owl:Class ;
+                                    rdfs:subClassOf cceo:CognitiveUtilizationDisposition ;
+                                    rdfs:label "Cognitive Comparison Disposition"@en ;
+                                    skos:definition "A Cognitive Utilization Disposition realized in a Cognitive Process of Comparing."@en ;
+                                    cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveDisposition
+cceo:CognitiveDisposition rdf:type owl:Class ;
+                          rdfs:subClassOf cceo:MentalDisposition ;
+                          rdfs:label "Cognitive Disposition"@en ;
+                          skos:definition "A Mental Disposition realized in a CognitiveProcess"@en ;
+                          cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveInferenceDisposition
+cceo:CognitiveInferenceDisposition rdf:type owl:Class ;
+                                   rdfs:subClassOf cceo:CognitiveUtilizationDisposition ;
+                                   rdfs:label "Cognitive Inference Disposition"@en ;
+                                   skos:definition "A Cognitive Utilization Disposition realized in a Cognitive Process of Inferring."@en ;
+                                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcess
+cceo:CognitiveProcess rdf:type owl:Class ;
+                      rdfs:subClassOf cceo:RepresentationalMentalProcess ;
+                      rdfs:label "Cognitive Process"@en ;
+                      skos:definition "A mental process that brings into being, sustains, or modifies a cognitive representation."@en ;
+                      cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcessOfAssociation
+cceo:CognitiveProcessOfAssociation rdf:type owl:Class ;
+                                   rdfs:subClassOf cceo:CognitiveUtilizationProcess ;
+                                   rdfs:label "Cognitive Process of Association"@en ;
+                                   skos:definition "A Cognitive Process that just is the taking of some Cognitive Representation(s) as input and, based on some non-similarity and some non-evidential relation(s) between the input(s) and some representation(s), outputting some Cognitive Representation."@en ;
+                                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcessOfComparing
+cceo:CognitiveProcessOfComparing rdf:type owl:Class ;
+                                 rdfs:subClassOf cceo:CognitiveUtilizationProcess ;
+                                 rdfs:label "Cognitive Process of Comparing"@en ;
+                                 skos:definition "A Cognitive Process that just is the taking of some Cognitive Representations as input and, based on the similarity relations represented by the inputs, outputting some Cognitive Representation."@en ;
+                                 cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcessOfInferring
+cceo:CognitiveProcessOfInferring rdf:type owl:Class ;
+                                 rdfs:subClassOf cceo:CognitiveUtilizationProcess ;
+                                 rdfs:label "Cognitive Process of Inferring"@en ;
+                                 skos:definition "A Cognitive Process that just is the taking of some Cognitive Representation(s) as input and, based on the semantic or syntactic relations of the input(s), outputting some Cognitive Representation."@en ;
+                                 cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveRepresentation
+cceo:CognitiveRepresentation rdf:type owl:Class ;
+                             rdfs:subClassOf cceo:MentalRepresentation ;
+                             rdfs:label "Cognitive Representation"@en ;
+                             skos:scopeNote "A Mental Representation that has a mind-to-world direction of fit."@en ;
+                             cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveRepresentationFormation
+cceo:CognitiveRepresentationFormation rdf:type owl:Class ;
+                                      rdfs:subClassOf cceo:CognitiveProcess ;
+                                      owl:disjointWith cceo:CognitiveUtilizationProcess ;
+                                      rdfs:label "Cognitive Representation Formation"@en ;
+                                      skos:definition "A Cognitive Process that just is the formation of a Cognitive Representation."@en ;
+                                      cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveUtilizationDisposition
+cceo:CognitiveUtilizationDisposition rdf:type owl:Class ;
+                                     rdfs:subClassOf cceo:CognitiveDisposition ;
+                                     rdfs:label "Cognitive Utilization Disposition"@en ;
+                                     skos:definition "A Cognitive Disposition the realization of which is the formation of a Retrospective Disposition."@en ;
+                                     cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveUtilizationProcess
+cceo:CognitiveUtilizationProcess rdf:type owl:Class ;
+                                 rdfs:subClassOf cceo:CognitiveProcess ;
+                                 rdfs:label "Cognitive Utilization Process"@en ;
+                                 skos:definition "A Cognitive Process that just is the taking of some Cognitive Representation(s) as input and, based on the inputs, outputting some Cognitive Representation."@en ;
+                                 cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ConativeRepresenation
+cceo:ConativeRepresenation rdf:type owl:Class ;
+                           rdfs:subClassOf cceo:MentalRepresentation ;
+                           rdfs:label "Conative Represenation"@en ;
+                           skos:scopeNote "A mental representation that has a world-to-mind direction of fit."@en ;
+                           cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ConditionalSpecification
+cceo:ConditionalSpecification rdf:type owl:Class ;
+                              rdfs:subClassOf cco2:ont00000965 ;
+                              rdfs:label "Conditional Specification"@en ;
+                              skos:definition "a directive information entity that prescribes what should happen if a trigger condition is fulfilled."@en ;
+                              cco2:ont00001754 "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"@en ;
+                              cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ConfidenceValue
+cceo:ConfidenceValue rdf:type owl:Class ;
+                     rdfs:subClassOf cceo:MentalQuality ;
+                     rdfs:label "Confidence Value"@en ;
+                     skos:definition "A mental quality that, when fused with a cognitive representation (CR), determines the extent to which a cognitive system operates as if CR is veridical."@en ;
+                     cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Consciousness
+cceo:Consciousness rdf:type owl:Class ;
+                   rdfs:subClassOf obo:BFO_0000144 ;
+                   rdfs:label "Consciousness"@en ;
+                   skos:definition "Consciousness is an inseparable part of all mental processes. It is that part of the mental process that: a) confers a subjective perspective, a phenomenology, an experience of the mental process of which it is a part; and b) intends the object or event that the mental process is about, should such exist; i.e., it confers intentionality on the mental process."@en ;
+                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ConstraintSpecification
+cceo:ConstraintSpecification rdf:type owl:Class ;
+                             rdfs:subClassOf cceo:ObjectiveSpecification ;
+                             rdfs:label "Constraint Specification"@en ;
+                             skos:definition "An objective specification that specifies a set of limitations on the possible states of some entity."@en ;
+                             cco2:ont00001754 "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"@en ;
+                             cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Decision
+cceo:Decision rdf:type owl:Class ;
+              rdfs:subClassOf cceo:CognitiveProcess ;
+              rdfs:label "Decision"@en ;
+              skos:definition "a decision process is a process in which some agent or aggregate of agents having the role of a decision maker indicate a preference towards an option or bundle of options belonging to a set of possible alternatives"@en ;
+              cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DecisionAlternative
+cceo:DecisionAlternative rdf:type owl:Class ;
+                         rdfs:subClassOf cceo:Classification ;
+                         rdfs:label "Decision Alternative"@en ;
+                         skos:definition "a decision alternative is a classification that indicates some entity is to be considered as a possible choice in a decision described in a decision process plan"@en ;
+                         cco2:ont00001754 "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"@en ;
+                         cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DecisionMakerRole
+cceo:DecisionMakerRole rdf:type owl:Class ;
+                       rdfs:subClassOf obo:BFO_0000023 ;
+                       rdfs:label "Decision Maker Role"@en ;
+                       skos:definition "a decision role is a role wherein the bearer realizes the role by performing a decision process resulting in a decision"@en ;
+                       cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DecisionMethod
+cceo:DecisionMethod rdf:type owl:Class ;
+                    rdfs:subClassOf cceo:MethodSpecification ;
+                    rdfs:label "Decision Method"@en ;
+                    skos:definition "a decision method is a plan specification that outlines a workflow by which a decision will be made, as well as the requisite information content entities required to acheive said workflow."@en ;
+                    cco2:ont00001754 "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"@en ;
+                    cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DecisionPlanSpecification
+cceo:DecisionPlanSpecification rdf:type owl:Class ;
+                               rdfs:subClassOf cco2:ont00000974 ;
+                               rdfs:label "Decision Plan Specification"@en ;
+                               skos:definition "a decision plan specification is a plan specification that indicates how a decision will be executed, the alternatives that will be considered,  the criteria by which they will judged, and the preferences for those criteria"@en ;
+                               cco2:ont00001754 "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"@en ;
+                               cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DecisionSpecification
+cceo:DecisionSpecification rdf:type owl:Class ;
+                           rdfs:subClassOf cco2:ont00000965 ;
+                           rdfs:label "Decision Specification"@en ;
+                           skos:definition "A directive information content entity that indicates the results of a decision (occurrent) wherein one option is selected from some set of possible alternatives"@en ;
+                           cco2:ont00001754 "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"@en ;
+                           cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DiagnosticProcess
+cceo:DiagnosticProcess rdf:type owl:Class ;
+                       rdfs:subClassOf cceo:ActOfInvestigation ;
+                       obo:IAO_0000116 "A diagnostic process that is a process of proper cognitive functioning is a process of proper diagnostic functioning according to the paper \"Warranted Diagnosis.\" Def = An investigative process that inputs representations that are warranted, including a clinical picture that is warranted, and, based on these inputs, outputs a warranted assertion to the effect that the patient does or does not have a disease, disease progression, disorder, or combination thereof of a certain type."@en ;
+                       rdfs:label "Diagnostic Process"@en ;
+                       skos:definition "An investigative process that has as inputs: (1) a clinical picture of a given patient, (2) an aggregate of representations of at least one type of disease, disease course, or disorder and at least one type of phenotype whose instances are associated with instances of that disease, disease course, disorder, or combination thereof, and has as output (3) an assertion based on (1) and (2) to the effect that the patient does or does not have a disease, disease course, disorder, or combination thereof of a certain type."@en ;
+                       cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DirectRepresentation
+cceo:DirectRepresentation rdf:type owl:Class ;
+                          rdfs:subClassOf cceo:RepresentationThatIsWarranted ;
+                          rdfs:label "Direct Representation"@en ;
+                          skos:scopeNote "x is a Representation that is Warranted in some subject s & x is_about y & x comes into existence, as a result of a causal process initiated by y and in a way appropriate to y, in the cognitive system of s."@en ;
+                          cco2:ont00001754 "http://ceur-ws.org/Vol-1515/regular10.pdf"@en ;
+                          cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DispositionToCognitivelyRepresent
+cceo:DispositionToCognitivelyRepresent rdf:type owl:Class ;
+                                       rdfs:subClassOf cceo:CognitiveDisposition ;
+                                       rdfs:label "DispositionToCognitivelyRepresent"@en ;
+                                       skos:definition "A cognitive disposition that is realized in the formation of a cognitive representation."@en ;
+                                       cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EvaluationProtocol
+cceo:EvaluationProtocol rdf:type owl:Class ;
+                        rdfs:subClassOf cco2:ont00000974 ;
+                        rdfs:label "Evaluation Protocol"@en ;
+                        skos:definition "An evaluation protocol is a plan specification that details how some variable or entity of interest is to be characterized through a set of measurements, observations, or estimates."@en ;
+                        cco2:ont00001754 "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"@en ;
+                        cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/FormalComparing
+cceo:FormalComparing rdf:type owl:Class ;
+                     rdfs:subClassOf cceo:IsomorphicComparing ;
+                     rdfs:label "Formal Comparing"@en ;
+                     skos:definition "An Isomorphic Comparing that is the process of bringing CognitiveRepresentations about multiple formal systems into one to one correspondence."@en ;
+                     cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Hypothesis
+cceo:Hypothesis rdf:type owl:Class ;
+                rdfs:subClassOf cco2:ont00000853 ;
+                obo:IAO_0000116 "This might be a synonym of 'theory'."@en ;
+                rdfs:label "Hypothesis"@en ;
+                skos:definition "A descriptive information content entity that participates in an investigative process and describes a portion of reality that is the object of that investigative process."@en ;
+                cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IdentificationProcess
+cceo:IdentificationProcess rdf:type owl:Class ;
+                           rdfs:subClassOf cceo:CognitiveProcess ;
+                           rdfs:label "Identification Process"@en ;
+                           skos:definition "A Propspective Cognitive Process that has a Comparing Process and a Reasoning Process as subprocesses and realizes a Belief Disposition the realization of which is the formation of a Belief Representation about whether some Cognitive Representations are about the same entity."@en ;
+                           cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ImaginationProcess
+cceo:ImaginationProcess rdf:type owl:Class ;
+                        rdfs:subClassOf cceo:CognitiveProcess ;
+                        rdfs:label "Imagination Process"@en ;
+                        skos:definition "A mental process that manipulates mental images and words that go beyond mere memory and thoughts about the objects and entities that the person has encountered, to visualise or consider entities and states of affairs that the person has never encountered and which may not yet exist or obtain in the world."@en ;
+                        cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Indicator
+cceo:Indicator rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:BFO_0000056 ;
+                                                            owl:someValuesFrom cceo:ActOfInvestigation
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf obo:BFO_0000001 ;
+               rdfs:label "Indicator"@en ;
+               skos:definition "A portion of reality that participates in an investigative process and affect an agent’s estimation that some other portion of reality exists."@en ;
+               cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IndicatorSpecification
+cceo:IndicatorSpecification rdf:type owl:Class ;
+                            rdfs:subClassOf cco2:ont00000965 ;
+                            rdfs:label "Indicator Specification"@en ;
+                            skos:definition "A directive information content entity that prescribes the features of an indicator."@en ;
+                            cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentComparing
+cceo:InformationContentComparing rdf:type owl:Class ;
+                                 rdfs:subClassOf cceo:SemanticComparing ;
+                                 owl:disjointWith cceo:IsomorphicComparing ;
+                                 rdfs:label "Information Content Comparing"@en ;
+                                 skos:definition "A semantic comparing process that compares represented entities based on what portions of reality each is about."@en ;
+                                 cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentComparisonDisposition
+cceo:InformationContentComparisonDisposition rdf:type owl:Class ;
+                                             rdfs:subClassOf cceo:SemanticComparisonDisposition ;
+                                             rdfs:label "Information Content Comparison Disposition"@en ;
+                                             skos:definition "A Semantic Comparison Disposition realized in a process of Information Content Comparison."@en ;
+                                             cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IntelligenceAnalysis
+cceo:IntelligenceAnalysis rdf:type owl:Class ;
+                          rdfs:subClassOf cco2:ont00001251 ;
+                          rdfs:comment "These need to be evaluated and moved. #issue -dgl"@en ;
+                          rdfs:label "Intelligence Analysis"@en ;
+                          skos:definition "A process that converts processed information into intelligence through the integration, evaluation, analysis, and interpretation of all source data and the preparation of intelligence products in support of known or anticipated user requirements."@en ;
+                          cco2:ont00001754 "DOD Dictionary. SOURCE: JP 2-01"@en ;
+                          cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IntelligenceProcess
+cceo:IntelligenceProcess rdf:type owl:Class ;
+                         rdfs:subClassOf cco2:ont00001251 ;
+                         rdfs:comment "These need to be evaluated and moved. #issue -dgl"@en ;
+                         rdfs:label "Intelligence Process"@en ;
+                         skos:definition "A planned process by which information is converted into intelligence and made available to users"@en ;
+                         cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IntelligenceReport
+cceo:IntelligenceReport rdf:type owl:Class ;
+                        rdfs:subClassOf cco2:ont00000624 ;
+                        rdfs:label "Intelligence Report"@en ;
+                        skos:definition "A report of information, usually on a single item, made at any level of command in tactical operations and disseminated as rapidly as possible in keeping with the timeliness of the information."@en ;
+                        cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IsomorphicComparing
+cceo:IsomorphicComparing rdf:type owl:Class ;
+                         rdfs:subClassOf cceo:SemanticComparing ;
+                         rdfs:label "Isomorphic Comparing"@en ;
+                         skos:definition "A semantic comparing process that is based on whether entities can be mapped onto other entities."@en ;
+                         cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IsomorphicComparisonDisposition
+cceo:IsomorphicComparisonDisposition rdf:type owl:Class ;
+                                     rdfs:subClassOf cceo:SemanticComparisonDisposition ;
+                                     rdfs:label "Isomorphic Comparison Disposition"@en ;
+                                     skos:definition "A Semantic Comparison Disposition realized in a process of Isomorphic Comparison."@en ;
+                                     cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MentalCapability
+cceo:MentalCapability rdf:type owl:Class ;
+                      rdfs:subClassOf cceo:BodilyCapability ;
+                      rdfs:label "Mental Capability"@en ;
+                      cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MentalDisposition
+cceo:MentalDisposition rdf:type owl:Class ;
+                       rdfs:subClassOf cceo:BodilyDisposition ;
+                       rdfs:label "Mental Disposition"@en ;
+                       skos:definition "A bodily disposition that is realized in a mental process."@en ;
+                       cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MentalProcess
+cceo:MentalProcess rdf:type owl:Class ;
+                   rdfs:subClassOf cceo:BodilyProcess ;
+                   rdfs:label "Mental Process"@en ;
+                   skos:scopeNote "A bodily process in which a mental quality participates. Examples include thinking, feeling pain, remembering and emotion as occurrent experiences."@en ;
+                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MentalQuality
+cceo:MentalQuality rdf:type owl:Class ;
+                   rdfs:subClassOf cceo:BodilyQuality ;
+                   obo:IAO_0000116 "We need to add something like 'anatomical structure' to the ontology or change 'anatomical structure' to something already defined. #issue Anatomical structure added but still has issues."@en ;
+                   rdfs:label "Mental Quality"@en ;
+                   skos:definition "A BodilyQuality which specifically depends on an anatomical structure in the cognitive system of an organism."@en ;
+                   cco2:ont00001754 "http://ceur-ws.org/Vol-1515/regular10.pdf"@en ;
+                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MentalRepresentation
+cceo:MentalRepresentation rdf:type owl:Class ;
+                          rdfs:subClassOf cceo:MentalQuality ;
+                          rdfs:comment "The is Ceusters and Smith's definition of cogntive representation. It better applies to mental representation which has cognitive representation as a subclass."@en ;
+                          rdfs:label "Mental Representation"@en ;
+                          skos:definition "a representation which is a mental quality."@en ;
+                          cco2:ont00001754 "http://ceur-ws.org/Vol-1515/regular10.pdf"@en ;
+                          cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MentalSystem
+cceo:MentalSystem rdf:type owl:Class ;
+                  rdfs:subClassOf cceo:System ;
+                  rdfs:label "Mental System"@en ;
+                  skos:definition "A system all of whose parts are also parts of a single organism and which realizes mental dispositions."@en ;
+                  cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MethodSpecification
+cceo:MethodSpecification rdf:type owl:Class ;
+                         rdfs:subClassOf cco2:ont00000974 ;
+                         rdfs:label "Method Specification"@en ;
+                         skos:definition "a method is a plan specification consisting of a set of action specifications that constitute a generic workflow for realizing some standardized objective"@en ;
+                         cco2:ont00001754 "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"@en ;
+                         cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ModelingProcess
+cceo:ModelingProcess rdf:type owl:Class ;
+                     rdfs:subClassOf cceo:ActOfAttending ;
+                     rdfs:label "Modeling Process"@en ;
+                     skos:definition "a modelign process is an act of appraisal that yields a reproducible representation of the entity in the form of a model"@en ;
+                     cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Non-ReferringRepresentationalUnit
+cceo:Non-ReferringRepresentationalUnit rdf:type owl:Class ;
+                                       rdfs:subClassOf cceo:RepresentationalUnit ;
+                                       owl:disjointWith cceo:ReferringRepresentationalUnit ;
+                                       rdfs:label "Non-Referring Representational Unit"@en ;
+                                       skos:definition "A Representational Unit which, for whatever reason, fails to be about anything."@en ;
+                                       cco2:ont00001754 "http://ceur-ws.org/Vol-1515/regular10.pdf"@en ;
+                                       cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ObjectiveSpecification
+cceo:ObjectiveSpecification rdf:type owl:Class ;
+                            rdfs:subClassOf cco2:ont00000965 ;
+                            rdfs:comment "I can't find the source for this. #issue -dgl"@en ;
+                            rdfs:label "Objective Specification"@en ;
+                            skos:definition "A directive information entity that prescribes an intended process endstate."@en ;
+                            cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PerceivingProcess
+cceo:PerceivingProcess rdf:type owl:Class ;
+                       rdfs:subClassOf cceo:MentalProcess ;
+                       rdfs:comment "Alternative def: A CognitiveProcess that is the forming of a DirectRepresentation."@en ;
+                       rdfs:label "Perceiving Process"@en ;
+                       skos:definition "A mental process which is a) produced by a causal process (for example involving light rays or air vibrations) involving a part of the environment of the organism, and b) is experienced by the organism as being so caused, and c) in which the relevant part of the environment is thereby directly represented to the organism."@en ;
+                       cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PerceptualDisposition
+cceo:PerceptualDisposition rdf:type owl:Class ;
+                           rdfs:subClassOf cceo:MentalDisposition ;
+                           rdfs:label "Perceptual Disposition"@en ;
+                           skos:definition "A Cognitive Disposition the realization of which is Perceiving."@en ;
+                           cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PositiveConfidenceValue
+cceo:PositiveConfidenceValue rdf:type owl:Class ;
+                             rdfs:subClassOf cceo:ConfidenceValue ;
+                             rdfs:label "Positive Confidence Value"@en ;
+                             skos:definition "A confidence value that when fused with a cognitive representation CR results in the bearing cognitive system treating CR, to some extent, as if it were veridical."@en ;
+                             cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ProcessOfProperCognitiveFunctioning
+cceo:ProcessOfProperCognitiveFunctioning rdf:type owl:Class ;
+                                         owl:equivalentClass [ owl:intersectionOf ( cceo:CognitiveProcess
+                                                                                    cceo:ProcessOfProperCognitiveFunctioning
+                                                                                  ) ;
+                                                               rdf:type owl:Class
+                                                             ] ;
+                                         obo:IAO_0000116 "This is a defined class but to make that explicit here requires terms for vetting a cognitive process. #issue -dgl"@en ;
+                                         rdfs:label "Process of Proper Cognitive Functioning"@en ;
+                                         skos:definition "A cognitive process that has been successfully vetted or designed to reliably form veridical cognitive representations in some type of environment(s)."@en ;
+                                         cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ProcessOfProperFunctioning
+cceo:ProcessOfProperFunctioning rdf:type owl:Class ;
+                                rdfs:subClassOf obo:BFO_0000015 ;
+                                rdfs:label "Process of Proper Functioning"@en ;
+                                skos:definition "A process that has been successfully vetted or designed to reliably form outputs that meet some standard, in environments of given types, and is occurring in an instance of such an environment."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ProcessingAndExploitation
+cceo:ProcessingAndExploitation rdf:type owl:Class ;
+                               rdfs:subClassOf cco2:ont00001251 ;
+                               rdfs:comment "These need to be evaluated and moved. #issue -dgl"@en ;
+                               rdfs:label "Processing and Exploitation"@en ;
+                               skos:definition "A planned process which converts collected information into forms suitable to the production of intelligence."@en ;
+                               cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ReferringRepresentationalUnit
+cceo:ReferringRepresentationalUnit rdf:type owl:Class ;
+                                   rdfs:subClassOf cceo:RepresentationalUnit ;
+                                   rdfs:label "Referring Representational Unit"@en ;
+                                   skos:definition "A Representational Unit which is both intended to be about something and does indeed succeed in this intent."@en ;
+                                   cco2:ont00001754 "http://ceur-ws.org/Vol-1515/regular10.pdf"@en ;
+                                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RejectionDecisionSpecification
+cceo:RejectionDecisionSpecification rdf:type owl:Class ;
+                                    rdfs:subClassOf cceo:DecisionSpecification ;
+                                    rdfs:label "Rejection Decision Specification"@en ;
+                                    skos:definition "A decision specification that specifies some proposition considered during a decision process is not to be pursue"@en ;
+                                    cco2:ont00001754 "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"@en ;
+                                    cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Representation
+cceo:Representation rdf:type owl:Class ;
+                    rdfs:subClassOf obo:BFO_0000019 ;
+                    rdfs:comment "A term for 'intended to be about' needs to be added to the ontology for the sake of making this a defined class."@en ;
+                    rdfs:label "Representation"@en ;
+                    skos:definition "A Quality which is_about or intended to be about a portion of reality."@en ;
+                    cco2:ont00001754 "http://ceur-ws.org/Vol-1515/regular10.pdf"@en ;
+                    cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationThatIsBelieved
+cceo:RepresentationThatIsBelieved rdf:type owl:Class ;
+                                  owl:equivalentClass [ owl:intersectionOf ( cceo:CognitiveRepresentation
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty cceo:is_fused_with ;
+                                                                               owl:someValuesFrom cceo:PositiveConfidenceValue
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                  rdfs:subClassOf cceo:CognitiveRepresentation ;
+                                  rdfs:label "Representation that is Believed"@en ;
+                                  skos:definition "A cognitive representation that is fused with a positive confidence value."@en ;
+                                  cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationThatIsWarranted
+cceo:RepresentationThatIsWarranted rdf:type owl:Class ;
+                                   owl:equivalentClass [ owl:intersectionOf ( cceo:RepresentationThatIsBelieved
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty cco2:ont00001816 ;
+                                                                                owl:someValuesFrom cceo:ProcessOfProperCognitiveFunctioning
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ] ;
+                                   rdfs:subClassOf cceo:RepresentationThatIsBelieved ;
+                                   rdfs:label "Representation that is Warranted"@en ;
+                                   skos:definition "A Representation that is Believed formed through proper cognitive functioning in a vetted- or designed-for environment."@en ;
+                                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalCharacter
+cceo:RepresentationalCharacter rdf:type owl:Class ;
+                               rdfs:subClassOf cceo:MentalQuality ;
+                               rdfs:label "Representational Character"@en ;
+                               skos:definition "A mental quality that is part of a mental representation and determines the way in which a mental representation is about its portion of reality."@en ;
+                               cco2:ont00001754 "PAPER: Towards a Foundation for a Realist Ontology of Cognitive Processes."@en ;
+                               cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalComplex
+cceo:RepresentationalComplex rdf:type owl:Class ;
+                             rdfs:subClassOf cceo:Representation ;
+                             owl:disjointWith cceo:RepresentationalUnit ;
+                             rdfs:label "Representational Complex"@en ;
+                             skos:scopeNote "A group of Representations that taken as a whole is a Representation."@en ;
+                             cco2:ont00001754 "'definition source' \"http://ceur-ws.org/Vol-1515/regular10.pdf\""@en ;
+                             cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalDirectedness
+cceo:RepresentationalDirectedness rdf:type owl:Class ;
+                                  rdfs:subClassOf cceo:MentalQuality ;
+                                  rdfs:label "Representational Directedness"@en ;
+                                  skos:definition "A mental quality that is part of a mental representation and determines the way a portion of reality is represented as being."@en ;
+                                  cco2:ont00001754 "PAPER: Towards a Foundation for a Realist Ontology of Cognitive Processes."@en ;
+                                  cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalMentalProcess
+cceo:RepresentationalMentalProcess rdf:type owl:Class ;
+                                   rdfs:subClassOf cceo:MentalProcess ;
+                                   rdfs:label "Representational Mental Process"@en ;
+                                   skos:definition "a mental process that is the coming into being, sustaining, modifying, or terminating a mental representation."@en ;
+                                   cco2:ont00001754 "PAPER: Towards a Foundation for a Realist Ontology of Cognitive Processes."@en ;
+                                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalUnit
+cceo:RepresentationalUnit rdf:type owl:Class ;
+                          rdfs:subClassOf cceo:Representation ;
+                          rdfs:label "Representational Unit"@en ;
+                          skos:definition "The smallest constituent sub-representation."@en ;
+                          cco2:ont00001754 "http://ceur-ws.org/Vol-1515/regular10.pdf"@en ;
+                          cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalUnitComponent
+cceo:RepresentationalUnitComponent rdf:type owl:Class ;
+                                   rdfs:subClassOf cceo:RepresentationalUnit ;
+                                   rdfs:label "Representational Unit Component"@en ;
+                                   skos:definition "A component of a Representation that is not intended by the artifact's authors to refer in isolation."@en ;
+                                   cco2:ont00001754 "http://ceur-ws.org/Vol-1515/regular10.pdf"@en ;
+                                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ResemblanceComparing
+cceo:ResemblanceComparing rdf:type owl:Class ;
+                          rdfs:subClassOf cceo:CognitiveProcessOfComparing ;
+                          owl:disjointWith cceo:SemanticComparing ;
+                          rdfs:label "Resemblance Comparing"@en ;
+                          skos:definition "A cognitive process of comparing that compares represented entities based on what universals each has in common."@en ;
+                          cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ResemblanceComparisonDisposition
+cceo:ResemblanceComparisonDisposition rdf:type owl:Class ;
+                                      rdfs:subClassOf cceo:CognitiveComparisonDisposition ;
+                                      rdfs:label "Resemblance Comparison Disposition"@en ;
+                                      skos:definition "A Comparison Disposition realized in a process of Resemblance Comparison."@en ;
+                                      cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SelectionDecisionSpecification
+cceo:SelectionDecisionSpecification rdf:type owl:Class ;
+                                    rdfs:subClassOf cceo:DecisionSpecification ;
+                                    rdfs:label "Selection Decision Specification"@en ;
+                                    skos:definition "A decision specification that specifies that a decision process has identifed one alternative to be pursued from a set of possible alternatives."@en ;
+                                    cco2:ont00001754 "https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"@en ;
+                                    cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SemanticComparing
+cceo:SemanticComparing rdf:type owl:Class ;
+                       rdfs:subClassOf cceo:CognitiveProcessOfComparing ;
+                       rdfs:label "Semantic Comparing"@en ;
+                       skos:definition "A cognitive process of comparing that compares entities based on what each is about."@en ;
+                       cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SemanticComparisonDisposition
+cceo:SemanticComparisonDisposition rdf:type owl:Class ;
+                                   rdfs:subClassOf cceo:CognitiveComparisonDisposition ;
+                                   rdfs:label "Semantic Comparison Disposition"@en ;
+                                   skos:definition "A Comparison Disposition realized in a process of Semantic Comparison."@en ;
+                                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SemanticInferenceDisposition
+cceo:SemanticInferenceDisposition rdf:type owl:Class ;
+                                  rdfs:subClassOf cceo:CognitiveInferenceDisposition ;
+                                  rdfs:label "Semantic Inference Disposition"@en ;
+                                  skos:definition "A Reasoning Disposition realized in a process of Semantic Reasoning."@en ;
+                                  cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SemanticInferringProcess
+cceo:SemanticInferringProcess rdf:type owl:Class ;
+                              rdfs:subClassOf cceo:CognitiveProcessOfInferring ;
+                              rdfs:label "Semantic Inferring Process"@en ;
+                              skos:definition "A cognitive process of reasoning that exploits the semantic relationships between representations."@en ;
+                              cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/StateOfAlertness
+cceo:StateOfAlertness rdf:type owl:Class ;
+                      rdfs:subClassOf cceo:ActOfAttending ;
+                      rdfs:label "State of Alertness"@en ;
+                      skos:definition "An act of attending which has high sensory awareness such as to be watchful and prompt to meet danger or emergency, or being quick to perceive and act."@en ;
+                      cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/StateOfVigilance
+cceo:StateOfVigilance rdf:type owl:Class ;
+                      rdfs:subClassOf cceo:ActOfAttending ;
+                      rdfs:label "State of Vigilance"@en ;
+                      skos:definition "An act of attending which occurs over prolonged periods of time."@en ;
+                      cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SyntacticInferenceDisposition
+cceo:SyntacticInferenceDisposition rdf:type owl:Class ;
+                                   rdfs:subClassOf cceo:CognitiveInferenceDisposition ;
+                                   rdfs:label "Syntactic Inference Disposition"@en ;
+                                   skos:definition "A Reasoning Disposition realized in a process of Syntactic Reasoning."@en ;
+                                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SyntacticInferringProcess
+cceo:SyntacticInferringProcess rdf:type owl:Class ;
+                               rdfs:subClassOf cceo:CognitiveProcessOfInferring ;
+                               rdfs:label "Syntactic Inferring Process"@en ;
+                               skos:definition "A cognitive process of reasoning that exploits the syntactic relationships between representations."@en ;
+                               cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/System
+cceo:System rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000040 ;
+            rdfs:label "System"@en ;
+            skos:definition "A material entity that consists of multiple components that are causally integrated."@en ;
+            cco2:ont00001754 "http://www.ontobee.org/ontology/RO?iri=http://purl.obolibrary.org/obo/RO_0002577"@en ;
+            cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/UnrecognizedNon-ReferringRepresentationalUnit
+cceo:UnrecognizedNon-ReferringRepresentationalUnit rdf:type owl:Class ;
+                                                   rdfs:subClassOf cceo:Non-ReferringRepresentationalUnit ;
+                                                   rdfs:label "UnrecognizedNon-ReferringRepresentationalUnit"@en ;
+                                                   skos:definition "A Non-Reffering Representational Unit which, although non-referring, is intended and believed to be about something."@en ;
+                                                   cco2:ont00001754 "http://ceur-ws.org/Vol-1515/regular10.pdf"@en ;
+                                                   cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/WarrantedAssertion
+cceo:WarrantedAssertion rdf:type owl:Class ;
+                        rdfs:subClassOf cceo:Assertion ;
+                        rdfs:label "Warranted Assertion"@en ;
+                        skos:definition "An assertion that is based on a representation that is warranted."@en ;
+                        cco2:ont00001754 "PAPER: WARRANTED DIAGNOSIS"@en ;
+                        cco2:ont00001760 "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology"^^xsd:anyURI .
+
+###  Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi
