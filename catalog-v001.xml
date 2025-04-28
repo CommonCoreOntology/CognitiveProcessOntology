@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
 	<uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AllCoreOntology" uri="imports/cco-merged.ttl"/>
+	<uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/MergedAllCoreOntology" uri="imports/CommonCoreOntologiesMerged.ttl"/>
 </catalog>
